@@ -69,7 +69,7 @@ if job.get('lighting') == 'soft':
 base = {ob.name: ob.location.copy() for ob in bpy.data.objects}
 controls = json.loads(scene['avatar_controls']) if scene.get('avatar_generator') == 'mpfb' else None
 def prepare_head_rig():
-    meshes = [ob for ob in scene.objects if ob.type == 'MESH']
+    meshes = [ob for ob in scene.objects if ob.type == 'MESH' and not ob.get('avatar_garment')]
     face = bpy.data.objects['mpfb-face']
     bounds = [face.matrix_world @ Vector(corner) for corner in face.bound_box]
     bottom = min(point.z for point in bounds)

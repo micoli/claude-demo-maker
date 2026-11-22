@@ -1,0 +1,26 @@
+{
+  "shirt": {
+    "file": "shirt/male_casualsuit03.mhclo",
+    "author": "MakeHuman Team",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+    "license": "CC0-1.0"
+  },
+  "polo": {
+    "file": "polo/Polo_t-shirt.mhclo",
+    "author": "namuhekam",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
+  },
+  "blouse": {
+    "file": "blouse/preppyblouse.mhclo",
+    "author": "reizibarrientos",
+    "source": "https://files.makehumancommunity.org/sites/default/files/clothes/1601/2039487116/preppyblouse.mhclo",
+    "license": "CC0-1.0"
+  },
+  "t-shirt": {
+    "file": "t-shirt/t_shirt_basic_tucked.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
+  }
+}

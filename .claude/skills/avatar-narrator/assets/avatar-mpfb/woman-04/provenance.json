@@ -12,9 +12,9 @@
       "caucasian": 0.7
     },
     "skin": "#c59b7a",
-    "hair": "ponytail01",
+    "hair": "hair_bun_brown",
     "hair_color": "#3d2720",
-    "shirt": "#535773",
+    "outfit": "blouse",
     "details": {
       "nose/nose-scale-horiz-decr": 0.235,
       "head/head-round": 0.185,
@@ -33,6 +33,13 @@
       "nose/nose-volume-decr": 0.08
     },
     "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+  },
+  "outfit": {
+    "id": "blouse",
+    "file": "blouse/preppyblouse.mhclo",
+    "author": "reizibarrientos",
+    "source": "https://files.makehumancommunity.org/sites/default/files/clothes/1601/2039487116/preppyblouse.mhclo",
+    "license": "CC0-1.0"
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -90,9 +97,11 @@
       "license": "CC0"
     },
     {
-      "file": "hair/ponytail01/ponytail01.mhclo",
       "type": "Hair",
-      "license": "CC0"
+      "file": "hair_bun_brown/hair_bun_brown.mhclo",
+      "author": "RehmanPolanski",
+      "source": "https://static.makehumancommunity.org/assets/assetpacks/hair01.html",
+      "license": "CC0-1.0"
     }
   ],
   "controls": {
@@ -135,5 +144,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 23016
+  "triangles": 21796
 }

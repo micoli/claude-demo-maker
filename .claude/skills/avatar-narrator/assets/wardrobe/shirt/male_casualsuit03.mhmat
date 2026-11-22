@@ -1,0 +1,6 @@
+name male_casualsuit03
+diffuseColor 1.0 1.0 1.0
+shininess 0.15
+opacity 1
+diffuseTexture male_casualsuit03_diffuse.png
+shaderConfig diffuse true

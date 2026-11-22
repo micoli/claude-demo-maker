@@ -14,21 +14,28 @@
     "skin": "#c59b7a",
     "hair": "short02",
     "hair_color": "#2b211c",
-    "shirt": "#535773",
+    "outfit": "polo",
     "details": {
       "nose/nose-scale-horiz-decr": 0.235,
       "head/head-round": 0.185
     }
   },
+  "outfit": {
+    "id": "polo",
+    "file": "polo/Polo_t-shirt.mhclo",
+    "author": "namuhekam",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
+  },
   "hair_eye_clearance": {
     "protected": true,
     "trimmed_faces": 19,
+    "passed": true,
     "checked_angles_degrees": [
       -30,
       0,
       30
-    ],
-    "passed": true
+    ]
   },
   "generator": "mpfb",
   "version": "2.0.18",
@@ -121,5 +128,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 20706
+  "triangles": 20936
 }

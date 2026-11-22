@@ -1,0 +1,6 @@
+name strawberryblondhairMaterial
+diffuseColor  0.64 0.64 0.64
+shininess 0.01961
+opacity 0
+diffuseTexture StrawberryBlondHair.png
+shaderConfig diffuse true

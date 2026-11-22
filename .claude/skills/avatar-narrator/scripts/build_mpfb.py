@@ -12,6 +12,7 @@ from pathlib import Path
 
 import bpy
 from mathutils import Vector
+from mathutils.bvhtree import BVHTree
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'assets/avatar-mpfb'
@@ -32,6 +33,43 @@ def material(name, color):
     shader.inputs['Base Color'].default_value = (*rgb, 1)
     shader.inputs['Roughness'].default_value = .72
     return mat
+
+
+def fit_surface_clearance(human, garment, body, bottom):
+    world = human.matrix_world
+    surface = BVHTree.FromPolygons(
+        [world @ vertex.co for vertex in human.data.vertices],
+        [tuple(face.vertices) for face in human.data.polygons if all(i in body for i in face.vertices)],
+    )
+    garment_world = garment.matrix_world
+    inverse = garment_world.inverted()
+    for vertex in garment.data.vertices:
+        point = garment_world @ vertex.co
+        if point.z < bottom - .04:
+            continue
+        nearest, normal, _, _ = surface.find_nearest(point, .03)
+        if nearest is not None and (point - nearest).dot(normal) < .003:
+            vertex.co = inverse @ (nearest + normal * .003)
+
+
+def covered_torso_vertices(human, garment, body, bottom):
+    garment_world = garment.matrix_world
+    cloth = BVHTree.FromPolygons(
+        [garment_world @ vertex.co for vertex in garment.data.vertices],
+        [tuple(face.vertices) for face in garment.data.polygons],
+    )
+    covered = set()
+    world = human.matrix_world
+    normal_transform = world.to_3x3().inverted().transposed()
+    for index in body:
+        vertex = human.data.vertices[index]
+        point = world @ vertex.co
+        if not bottom <= point.z <= bottom + .085:
+            continue
+        normal = (normal_transform @ vertex.normal).normalized()
+        if any(cloth.ray_cast(point, direction, .05)[0] is not None for direction in (normal, -normal)):
+            covered.add(index)
+    return covered
 
 
 def crop_mesh(ob, allowed, min_z, max_x, blocked=None):
@@ -167,9 +205,19 @@ def main():
     parser.add_argument('--assets',required=True,type=Path)
     parser.add_argument('--targets',required=True,type=Path)
     parser.add_argument('--only')
+    parser.add_argument('--outfit', help='Override the outfit when building one avatar')
     parser.add_argument('--group',choices=['man','woman','neutral'],help='Rebuild only one group in --bank mode')
     parser.add_argument('--bank',action='store_true',help='Build ten men, ten women and ten neutral presenters from profiles.json')
     args=parser.parse_args(sys.argv[sys.argv.index('--')+1:])
+    if args.outfit and not args.only:
+        parser.error('--outfit requires --only')
+    wardrobe = ROOT / 'assets/wardrobe'
+    outfits = json.loads((wardrobe / 'catalog.json').read_text())
+    hairstyle_root = ROOT / 'assets/hairstyles'
+    hairstyle_catalog = hairstyle_root / 'catalog.json'
+    hairstyles = json.loads(hairstyle_catalog.read_text()) if hairstyle_catalog.is_file() else {}
+    if args.outfit and args.outfit not in outfits:
+        parser.error(f'Unknown outfit. Choose from {", ".join(outfits)}')
     if not bpy.app.background:
         raise RuntimeError('Use a separate headless Blender process; do not run in a live scene')
     for path in (args.mpfb_root/'src/mpfb/blender_manifest.toml', args.assets, args.targets/'assets/visemes02'):
@@ -226,7 +274,6 @@ def main():
         human.data.materials.clear()
         skin=material('Skin',skin_hex)
         human.data.materials.append(skin)
-        human.data.materials.append(material('Shirt',profile.get('shirt','#344b64' if gender else '#496a61')))
         human.data.materials.append(material('Lips','#'+''.join(f'{max(0,int(skin_hex[i:i+2],16)-d):02x}' for i,d in [(1,10),(3,20),(5,12)])))
         def group_members(name):
             idx=human.vertex_groups[name].index
@@ -235,14 +282,19 @@ def main():
         lips=group_members('lips')
         top=max((human.matrix_world @ human.data.vertices[i].co).z for i in body)
         bottom=top-.33
-        # Neck opening: a simple curved neckline, no naked torso in the bust.
         for face in human.data.polygons:
-            center=sum((human.data.vertices[i].co for i in face.vertices),Vector())/len(face.vertices)
-            z=(human.matrix_world @ center).z
-            if len(set(face.vertices)&lips) >= len(face.vertices)*.75:
-                face.material_index=2
-            elif z < top-.27+min(.035,abs(center.x)*.3):
-                face.material_index=1
+            face.material_index = int(len(set(face.vertices) & lips) >= len(face.vertices) * .75)
+        outfit_id = args.outfit or profile.get('outfit') or ('shirt' if gender >= .5 else 'blouse')
+        outfit = outfits[outfit_id]
+        garment_file = wardrobe / outfit['file']
+        garment = HumanService.add_mhclo_asset(str(garment_file), human, subdiv_levels=0, set_up_rigging=False)
+        garment['avatar_garment'] = outfit_id
+        bpy.context.view_layer.update()
+        delete_group = 'Delete.' + garment_file.stem.replace(' ', '_')
+        covered = group_members(delete_group) if delete_group in human.vertex_groups else set()
+        fit_surface_clearance(human, garment, body, bottom)
+        if not covered:
+            covered = covered_torso_vertices(human, garment, body, bottom)
         assets_used=[]
         def asset(subdir, filename, kind, required=True):
             matches=list(args.assets.rglob(filename))
@@ -261,7 +313,16 @@ def main():
         asset('tongue','tongue01.mhclo','Tongue')
         hair=None
         if hairname != 'bald':
-            hair=asset('hair',hairname+'.mhclo','Hair')
+            if hairname in hairstyles:
+                hairstyle = hairstyles[hairname]
+                hair = HumanService.add_mhclo_asset(str(hairstyle_root / hairstyle['file']), human,
+                                                    asset_type='Hair', subdiv_levels=0, set_up_rigging=False)
+                bpy.context.view_layer.update()
+                fit_surface_clearance(human, hair, body, bottom)
+                assets_used.append({'type': 'Hair', **hairstyle})
+            else:
+                hair = asset('hair', hairname+'.mhclo', 'Hair')
+            hair['avatar_hair'] = hairname
             tint_hair(hair,profile['hair_color'])
         FaceService.load_targets(human,load_microsoft_visemes=False,load_meta_visemes=True,load_arkit_faceunits=True)
         FaceService.interpolate_targets(human)
@@ -269,7 +330,7 @@ def main():
         blocked=eye_clearance_faces(hair,eye) if hair else set()
         meshes=[ob for ob in bpy.context.scene.objects if ob.type=='MESH']
         for ob in meshes:
-            allowed=body if ob==human else set(range(len(ob.data.vertices)))
+            allowed=body - covered if ob==human else set(range(len(ob.data.vertices)))
             crop_mesh(ob,allowed,bottom,.29,blocked if ob==hair else set())
         studio(top+.025,bottom)
         scene=bpy.context.scene
@@ -296,7 +357,7 @@ def main():
         bpy.ops.export_scene.gltf(filepath=str(folder/(ident+'.glb')),use_selection=True,export_format='GLB',export_animations=False,export_morph=True,export_apply=False)
         scene.render.filepath=str(folder/'preview.png')
         bpy.ops.render.render(write_still=True)
-        info={'profile':profile,'hair_eye_clearance':{'protected':True,'trimmed_faces':len(blocked)},'generator':'mpfb','version':'2.0.18','id':ident,'visual_approval':'pending','macro':macro,'assets':assets_used,'controls':json.loads(scene['avatar_controls']),'source':'https://github.com/makehumancommunity/mpfb2/tree/v2.0.18','geometry_license':'CC0-1.0','triangles':sum(sum(len(p.vertices)-2 for p in ob.data.polygons) for ob in meshes)}
+        info={'profile':profile,'outfit':{'id':outfit_id,**outfit},'hair_eye_clearance':{'protected':True,'trimmed_faces':len(blocked)},'generator':'mpfb','version':'2.0.18','id':ident,'visual_approval':'pending','macro':macro,'assets':assets_used,'controls':json.loads(scene['avatar_controls']),'source':'https://github.com/makehumancommunity/mpfb2/tree/v2.0.18','geometry_license':'CC0-1.0','triangles':sum(sum(len(p.vertices)-2 for p in ob.data.polygons) for ob in meshes)}
         (folder/'provenance.json').write_text(json.dumps(info,indent=2)+'\n')
         catalog.append({'id':ident,'generator':'mpfb','blend':ident+'/avatar.blend','glb':ident+'/'+ident+'.glb','preview':ident+'/preview.png','gender':profile.get('group','man' if gender >= .75 else 'woman' if gender <= .25 else 'neutral'),'hair':hairname,'visual_approval':'pending','triangles':info['triangles']})
         if args.bank:

@@ -14,21 +14,28 @@
     "skin": "#9d714f",
     "hair": "short01",
     "hair_color": "#221a18",
-    "shirt": "#79736a",
+    "outfit": "shirt",
     "details": {
       "nose/nose-scale-horiz-incr": 0.1,
       "head/head-oval": 0.22
     }
   },
+  "outfit": {
+    "id": "shirt",
+    "file": "shirt/male_casualsuit03.mhclo",
+    "author": "MakeHuman Team",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+    "license": "CC0-1.0"
+  },
   "hair_eye_clearance": {
     "protected": true,
     "trimmed_faces": 0,
+    "passed": true,
     "checked_angles_degrees": [
       -30,
       0,
       30
-    ],
-    "passed": true
+    ]
   },
   "generator": "mpfb",
   "version": "2.0.18",
@@ -121,5 +128,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 21130
+  "triangles": 21468
 }

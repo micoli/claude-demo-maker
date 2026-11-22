@@ -12,9 +12,9 @@
       "caucasian": 0.2
     },
     "skin": "#a4714f",
-    "hair": "ponytail01",
+    "hair": "bob_blunt",
     "hair_color": "#503426",
-    "shirt": "#79736a",
+    "outfit": "blouse",
     "details": {
       "nose/nose-scale-horiz-decr": 0.145,
       "head/head-round": 0.22,
@@ -34,9 +34,16 @@
     },
     "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
   },
+  "outfit": {
+    "id": "blouse",
+    "file": "blouse/preppyblouse.mhclo",
+    "author": "reizibarrientos",
+    "source": "https://files.makehumancommunity.org/sites/default/files/clothes/1601/2039487116/preppyblouse.mhclo",
+    "license": "CC0-1.0"
+  },
   "hair_eye_clearance": {
     "protected": true,
-    "trimmed_faces": 0,
+    "trimmed_faces": 21,
     "passed": true,
     "checked_angles_degrees": [
       -30,
@@ -90,9 +97,11 @@
       "license": "CC0"
     },
     {
-      "file": "hair/ponytail01/ponytail01.mhclo",
       "type": "Hair",
-      "license": "CC0"
+      "file": "bob_blunt/bob_blunt.mhclo",
+      "author": "MargaretToigo",
+      "source": "https://static.makehumancommunity.org/assets/assetpacks/hair01.html",
+      "license": "CC0-1.0"
     }
   ],
   "controls": {
@@ -135,5 +144,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 22826
+  "triangles": 19986
 }

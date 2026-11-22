@@ -1,0 +1,6 @@
+name Polo_t-shirt
+diffuseColor 1.0 1.0 1.0
+shininess 0.15
+opacity 1
+diffuseTexture Polo_Base_Color.png
+shaderConfig diffuse true

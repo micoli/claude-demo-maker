@@ -12,9 +12,9 @@
       "caucasian": 0.1
     },
     "skin": "#bb8b62",
-    "hair": "ponytail01",
+    "hair": "bob_blunt",
     "hair_color": "#857d72",
-    "shirt": "#4e6b60",
+    "outfit": "t-shirt",
     "details": {
       "nose/nose-scale-horiz-incr": 0.19,
       "head/head-round": 0.115,
@@ -34,9 +34,16 @@
     },
     "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
   },
+  "outfit": {
+    "id": "t-shirt",
+    "file": "t-shirt/t_shirt_basic_tucked.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
+  },
   "hair_eye_clearance": {
     "protected": true,
-    "trimmed_faces": 0,
+    "trimmed_faces": 26,
     "passed": true,
     "checked_angles_degrees": [
       -30,
@@ -90,9 +97,11 @@
       "license": "CC0"
     },
     {
-      "file": "hair/ponytail01/ponytail01.mhclo",
       "type": "Hair",
-      "license": "CC0"
+      "file": "bob_blunt/bob_blunt.mhclo",
+      "author": "MargaretToigo",
+      "source": "https://static.makehumancommunity.org/assets/assetpacks/hair01.html",
+      "license": "CC0-1.0"
     }
   ],
   "controls": {
@@ -135,5 +144,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 22898
+  "triangles": 20522
 }

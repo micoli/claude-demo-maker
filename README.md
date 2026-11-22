@@ -81,3 +81,5 @@ Dans Claude Code, envoie cette demande pour tester l’activation automatique et
 > Fais dire « Welcome to the demo » à l’avatar woman-03 avec synchronisation labiale. Prépare un aperçu MP4 dans `.scratch/videos/premier-essai/`.
 
 Tu peux également commencer la demande par `/avatar-narrator` pour choisir explicitement la skill. Les paramètres des scripts, les exemples de configuration et la procédure de reconstruction de la banque d’avatars sont détaillés dans le [SKILL.md](.claude/skills/avatar-narrator/SKILL.md).
+
+![avatars.jpg](avatars.jpg)

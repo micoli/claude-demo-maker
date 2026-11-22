@@ -1,0 +1,6 @@
+name hairMaterial
+diffuseColor  1 1 1
+shininess 0.2039
+opacity 1
+diffuseTexture Hair_bun_brown.png
+shaderConfig diffuse true

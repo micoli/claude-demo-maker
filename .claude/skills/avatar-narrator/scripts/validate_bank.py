@@ -43,7 +43,7 @@ def main():
         assert set(builder.VISEMES.values())|{'eyeBlinkLeft','eyeBlinkRight'} <= keys
         meshes=[o for o in scene.objects if o.type=='MESH']
         eye=next(o for o in meshes if o.name.endswith('.low-poly'))
-        hairs=[o for o in meshes if any(o.name.endswith('.'+h) for h in ('short01','short02','afro01','ponytail01'))]
+        hairs=[o for o in meshes if o.get('avatar_hair') or any(o.name.endswith('.'+h) for h in ('short01','short02','afro01','ponytail01'))]
         assert all(not builder.eye_clearance_faces(h,eye) for h in hairs),entry['id']+' hair overlaps eyes'
         assert not any(o.animation_data for o in meshes),'Unexpected body/head animation'
         for preview in ('preview.png','three-quarter.png'):

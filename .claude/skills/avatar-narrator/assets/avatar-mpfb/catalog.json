@@ -44,7 +44,7 @@
       "gender": "man",
       "hair": "short02",
       "visual_approval": "pending",
-      "triangles": 20706
+      "triangles": 20936
     },
     {
       "id": "man-05",
@@ -55,7 +55,7 @@
       "gender": "man",
       "hair": "short01",
       "visual_approval": "pending",
-      "triangles": 21130
+      "triangles": 21468
     },
     {
       "id": "man-06",
@@ -240,9 +240,9 @@
       "glb": "woman-02/woman-02.glb",
       "preview": "woman-02/preview.png",
       "gender": "woman",
-      "hair": "ponytail01",
+      "hair": "bob_blunt",
       "visual_approval": "pending",
-      "triangles": 22770
+      "triangles": 19930
     },
     {
       "id": "woman-03",
@@ -262,9 +262,9 @@
       "glb": "woman-04/woman-04.glb",
       "preview": "woman-04/preview.png",
       "gender": "woman",
-      "hair": "ponytail01",
+      "hair": "hair_bun_brown",
       "visual_approval": "pending",
-      "triangles": 23016
+      "triangles": 21796
     },
     {
       "id": "woman-05",
@@ -284,9 +284,9 @@
       "glb": "woman-06/woman-06.glb",
       "preview": "woman-06/preview.png",
       "gender": "woman",
-      "hair": "ponytail01",
+      "hair": "bob_blunt",
       "visual_approval": "pending",
-      "triangles": 23038
+      "triangles": 20214
     },
     {
       "id": "woman-07",
@@ -295,9 +295,9 @@
       "glb": "woman-07/woman-07.glb",
       "preview": "woman-07/preview.png",
       "gender": "woman",
-      "hair": "ponytail01",
+      "hair": "bob_blunt",
       "visual_approval": "pending",
-      "triangles": 22898
+      "triangles": 20522
     },
     {
       "id": "woman-08",
@@ -306,9 +306,9 @@
       "glb": "woman-08/woman-08.glb",
       "preview": "woman-08/preview.png",
       "gender": "woman",
-      "hair": "ponytail01",
+      "hair": "hair_bun_brown",
       "visual_approval": "pending",
-      "triangles": 22806
+      "triangles": 21584
     },
     {
       "id": "woman-09",
@@ -328,9 +328,9 @@
       "glb": "woman-10/woman-10.glb",
       "preview": "woman-10/preview.png",
       "gender": "woman",
-      "hair": "ponytail01",
+      "hair": "bob_blunt",
       "visual_approval": "pending",
-      "triangles": 22826
+      "triangles": 19986
     }
   ]
 }

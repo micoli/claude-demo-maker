@@ -1,0 +1,5 @@
+name T-shirt
+diffuseColor 0.47 0.18 0.14
+shininess 0.10
+opacity 1
+shaderConfig diffuse false
