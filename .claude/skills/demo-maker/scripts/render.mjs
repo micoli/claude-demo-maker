@@ -3,6 +3,32 @@ import { mkdtempSync, readFileSync, renameSync, rmSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+const portraitSize = 156;
+const borderWidth = 4;
+const portraitBackground = [229, 237, 242];
+const idleBorder = [99, 116, 135];
+const speakingBorder = [33, 206, 154];
+
+function circularPortrait(lines) {
+  const active = lines.map(({ start, end }) => `gte(T,${start})*lt(T,${end})`).join('+') || '0';
+  const radius = portraitSize / 2;
+  const distance = 'hypot(X-(W-1)/2,Y-(H-1)/2)';
+  const rgb = [...'rgb'].map((channel, index) => {
+    const background = portraitBackground[index];
+    const fill = `${background}+(${channel}(X,Y)-${background})*alpha(X,Y)/255`;
+    const border = `if(${active},${speakingBorder[index]},${idleBorder[index]})`;
+    return `${channel}='if(gte(${distance},${radius - borderWidth}),${border},${fill})'`;
+  });
+  const alpha = `a='255*clip(${radius}-${distance},0,1)'`;
+  return [
+    'crop=ih*0.54:ih*0.54:(iw-ow)/2:ih*0.17',
+    `scale=${portraitSize}:${portraitSize}:flags=lanczos`,
+    'format=gbrap',
+    `geq=${[...rgb, alpha].join(':')}`,
+    'format=rgba',
+  ].join(',');
+}
+
 const [jobFile, mode] = process.argv.slice(2);
 if (!jobFile || (mode && mode !== '--audio-only')) {
   throw Error('Usage: render.mjs dialogue.json [--audio-only]');
@@ -29,6 +55,7 @@ run(process.execPath, [dialogue, input, '--overlay', String(duration), ...(mode 
 
 if (!mode) {
   const fps = 25;
+  const { lines } = JSON.parse(readFileSync(join(dir, 'timeline.json'), 'utf8'));
   const inputs = ['-i', capture];
   for (const id of actors) {
     inputs.push('-framerate', String(fps), '-start_number', '1', '-i', join('actors', id, 'f_%04d.png'));
@@ -38,10 +65,11 @@ if (!mode) {
     '[0:v]scale=1600:900:force_original_aspect_ratio=decrease:force_divisible_by=2,pad=1600:900:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=25,tpad=stop_mode=clone:stop_duration=0.08[base]',
   ];
   let base = 'base';
-  for (const [index] of actors.entries()) {
+  for (const [index, actor] of actors.entries()) {
     const next = `v${index}`;
-    filters.push(`[${index + 1}:v]format=rgba,scale=220:220[a${index}]`);
-    filters.push(`[${base}][a${index}]overlay=W-w-20-${index}*(w+16):H-h-20[${next}]`);
+    const portrait = circularPortrait(lines.filter(line => line.speaker === actor));
+    filters.push(`[${index + 1}:v]${portrait}[a${index}]`);
+    filters.push(`[${base}][a${index}]overlay=W-w-20-${index}*(w+12):H-h-20[${next}]`);
     base = next;
   }
   const staging = mkdtempSync(join(dir, '.demo-render-'));

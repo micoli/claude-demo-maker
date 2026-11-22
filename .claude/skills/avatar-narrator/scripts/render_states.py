@@ -1,14 +1,60 @@
 """Render only missing mouth/blink/expression states in one Blender process."""
 import json
 import math
+import struct
 import sys
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 import bpy
 from mathutils import Euler, Matrix, Vector
 
 job = json.loads(Path(sys.argv[sys.argv.index('--')+1]).read_text())
+
+
+def restore_missing_textures(glb):
+    missing = [image for image in bpy.data.images
+               if image.source == 'FILE' and image.users and not image.has_data and not image.size[0]]
+    if not missing:
+        return
+    if not glb.is_file():
+        raise FileNotFoundError(f'Missing texture sources and companion GLB: {glb}')
+
+    with glb.open('rb') as stream:
+        if stream.read(8) != b'glTF\x02\x00\x00\x00':
+            raise ValueError(f'Expected glTF 2.0 binary: {glb}')
+        stream.read(4)
+        size, kind = struct.unpack('<I4s', stream.read(8))
+        if kind != b'JSON':
+            raise ValueError(f'Missing GLB JSON chunk: {glb}')
+        manifest = json.loads(stream.read(size))
+        _, kind = struct.unpack('<I4s', stream.read(8))
+        if kind != b'BIN\x00':
+            raise ValueError(f'Missing GLB binary chunk: {glb}')
+        offset = stream.tell()
+        embedded = {item['name']: item['bufferView'] for item in manifest.get('images', [])
+                    if 'name' in item and 'bufferView' in item}
+
+        with TemporaryDirectory() as staging:
+            for index, image in enumerate(missing):
+                name = Path(image.filepath).stem
+                if name not in embedded:
+                    raise ValueError(f'Missing texture {image.name} in {glb}')
+                view = manifest['bufferViews'][embedded[name]]
+                stream.seek(offset + view.get('byteOffset', 0))
+                source = Path(staging) / f'{index}{Path(image.filepath).suffix}'
+                source.write_bytes(stream.read(view['byteLength']))
+                image.filepath = str(source)
+                image.reload()
+                if not image.size[0]:
+                    raise ValueError(f'Cannot load texture {image.name} from {glb}')
+                image.pack()
+
+
 scene = bpy.context.scene
+if scene.get('avatar_generator') == 'mpfb':
+    restore_missing_textures(Path(job['glb']))
+
 scene.render.resolution_x = scene.render.resolution_y = job['size']
 scene.eevee.taa_render_samples = job['samples']
 if job.get('lighting') == 'soft':

@@ -84,12 +84,14 @@ export function renderAvatar(job, base, { planOnly=false }={}) {
   if (!['studio','soft'].includes(lighting)) throw Error('lighting must be studio or soft');
   const blend=join(BANK, job.avatar, 'avatar.blend');
   if (!existsSync(blend)) throw Error('MPFB avatar missing: run build_mpfb.py --bank first (or omit --bank for pilots)');
-  // Full file contents and renderer source, not mtimes: changes invalidate cache.
+  // Blend, companion textures and renderer contents determine the cache key.
   // Include Blender version for different installations / upgrades.
   const macBlender='/Applications/Blender.app/Contents/MacOS/Blender';
   const blender=process.env.BLENDER_EXE??(existsSync(macBlender)?macBlender:'blender');
   const version=run(blender, ['--version']);
-  const digest=hash(Buffer.concat([readFileSync(blend), readFileSync(join(HERE,'render_states.py')),
+  const glb=join(BANK, job.avatar, job.avatar+'.glb');
+  const textureSource=existsSync(glb) ? readFileSync(glb) : Buffer.alloc(0);
+  const digest=hash(Buffer.concat([readFileSync(blend), textureSource, readFileSync(join(HERE,'render_states.py')),
     Buffer.from(JSON.stringify([spec.size,spec.samples,lighting,version]))]));
   const cache=join(ROOT,'.scratch/videos/avatar-cache',job.avatar,digest);
   const missing=spec.states.filter(state=>!existsSync(join(cache,state+'.png')));
@@ -104,7 +106,7 @@ export function renderAvatar(job, base, { planOnly=false }={}) {
   try {
     if (missing.length) {
       const request=join(temp,'states.json');
-      writeFileSync(request,JSON.stringify({...spec,frames:undefined,states:missing,cache,lighting}));
+      writeFileSync(request,JSON.stringify({...spec,frames:undefined,states:missing,cache,lighting,glb}));
       run('python3',[join(HERE,'bl.py'),'--blend',blend,'--script',join(HERE,'render_states.py'),'--',request]);
     }
     // Build a fresh sequence then atomically replace only a renderer-owned directory.

@@ -88,8 +88,8 @@ for actor, color in zip(actors, colors):
     ImageDraw.Draw(ring).ellipse((1, 1, diameter*4-2, diameter*4-2), outline=color, width=12)
     ring.resize(inner.size, Image.Resampling.LANCZOS).save(out/f'{actor}-ring.png')
     known = {}
-    scale = round(diameter * 864/504)
-    offset = ((diameter-scale)//2, -round(diameter*113/504))
+    scale = round(diameter / .54)
+    offset = ((diameter-scale)//2, -round(scale * .17))
     for frame in sorted((out/'actors'/actor).glob('f_*.png')):
         target = path/frame.name
         target.unlink(missing_ok=True)
@@ -112,7 +112,7 @@ filters = []
 chain = '0:v'
 for index, (actor, center) in enumerate(zip(actors, centers)):
     x = center-diameter//2
-    times = '+'.join(f"between(t,{line['start']:.6f},{line['end']:.6f})" for line in timeline['lines'] if line['speaker']==actor) or '0'
+    times = '+'.join(f"gte(t,{line['start']:.6f})*lt(t,{line['end']:.6f})" for line in timeline['lines'] if line['speaker']==actor) or '0'
     filters.append(f'[{chain}][{index+1}:v]overlay={x}:{portrait_top}:shortest=1[p{index}]')
     filters.append(f"[p{index}][{index+1+len(actors)}:v]overlay={x}:{portrait_top}:enable='{times}'[v{index}]")
     chain = f'v{index}'

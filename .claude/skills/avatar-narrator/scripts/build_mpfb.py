@@ -278,11 +278,15 @@ def main():
         scene['avatar_controls']=json.dumps({'visemes':VISEMES,'blink':{'eyeBlinkLeft':1,'eyeBlinkRight':1},'expressions':EXPRESSIONS})
         # Simple materials are GLB-compatible; keep textures in the editable source and pack them.
         for image in bpy.data.images:
-            if image.source=='FILE' and image.has_data:
-                if max(image.size)>1024:
-                    factor=1024/max(image.size)
-                    image.scale(max(1,round(image.size[0]*factor)),max(1,round(image.size[1]*factor)))
-                image.pack()
+            if image.source != 'FILE' or image.packed_file or not image.users:
+                continue
+            width, height = image.size
+            if not width or not height:
+                raise ValueError(f'Cannot load avatar texture {image.filepath}')
+            if max(width, height) > 1024:
+                factor = 1024 / max(width, height)
+                image.scale(max(1, round(width * factor)), max(1, round(height * factor)))
+            image.pack()
         folder=OUT/ident
         folder.mkdir(parents=True,exist_ok=True)
         bpy.ops.wm.save_as_mainfile(filepath=str(folder/'avatar.blend'))
