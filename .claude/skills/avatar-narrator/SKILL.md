@@ -28,7 +28,7 @@ Read [references/mpfb.md](references/mpfb.md) for the migration and validation p
 ## Visual contract
 
 - Maintain 30 reusable fictional adult presenters: `man-01..10`, `woman-01..10` and `neutral-01..10`. The neutral group uses a deliberately balanced/androgynous visual appearance with varied adult ages, facial shapes, skin tones and hairstyles.
-- Show only head, neck and shoulders. Keep the camera, lighting and torso fixed. Use a fixed head by default and reserve small, explicitly timed head gestures for dialogue previews.
+- Show only head, neck and shoulders. Keep the camera, lighting and torso fixed. Keep the head fixed by default for standalone narration. For dialogue, use the subtle, explicitly timed gestures described below.
 - For this bank, give the female characters a visibly feminine art direction: tapered jaw and chin, softer cheek contours, a more slender neck, subtly shaped brows, and predominantly tied-back hairstyles. Preserve distinct adult ages, facial identities and skin tones. Apply the reproducible face targets in `assets/profiles.json`; do not rely on changing hair or colors alone. The user found the first female pass too androgynous.
 - Keep **both eyes completely unobstructed by hair** for every avatar. No fringe, bangs or strands in front of either eye. Prefer short, swept-back, tied-back or otherwise clear-face hairstyles. Reject or adjust any hairstyle that overlaps an eye in the front or three-quarter review views; check again after fitting it to a different face and when testing expressions.
 - Use low-poly anatomical proportions with a shaped jaw, nose, lips, ears, eyelids and simple hair geometry. No photoreal textures or expensive hair simulation.
@@ -75,7 +75,9 @@ node .claude/skills/avatar-narrator/scripts/dialogue.mjs .scratch/videos/<slug>/
 
 Set `"layout":"circles"` for 2–4 portraits with a light speaker outline and a stable random background per actor from `assets/background/`. Specify an actor's `background` filename for a fixed choice. The default `panels` layout accepts two people. Circular portraits default to `"lighting":"soft"` for reduced highlights. Use `"lighting":"studio"` on a job or actor to select the original light. The rendered-state cache distinguishes both options.
 
-For an optional head gesture, add `headMotion` to the actor with an array of intervals in absolute dialogue seconds. For example, `[{ "start": 12.76, "end": 13.56, "pitch": 3.5 }]` creates one nod. `pitch` nods, `tilt` inclines sideways and `turn` turns left or right. Angles are in degrees and at most 6 in either direction. Intervals for one actor cannot overlap. The motion returns to rest at each interval boundary and uses half-degree poses on the MPFB neck. Preview the actual result with its voice track before adopting a motion style.
+For dialogue, give speakers and listeners occasional small head gestures with `headMotion`. Use an array of intervals in absolute dialogue seconds. For example, `[{ "start": 12.76, "end": 13.56, "pitch": 3.5 }]` creates one nod. `pitch` nods, `tilt` inclines sideways and `turn` turns left or right. Angles are in degrees and at most 6 in either direction. Intervals for one actor cannot overlap. The motion returns to rest at each interval boundary and uses half-degree poses on the MPFB neck. Preview the actual result with its voice track before adopting a motion style. Set the actor's `expressions` to intervals with `start`, `end` and `value` (`neutral`, `warm`, `concerned` or `surprised`). For blinking, the actor can override `blinkStart` in seconds or set `blink: false`.
+
+Use `warm` for a slight smile at greetings, positive explanations and listening reactions. Alternate small left and right `tilt` gestures of roughly 1–2.5° over about a second, with quiet gaps and staggered timings between actors. Add a small nod when it serves the exchange. Keep blinks enabled and inspect close-ups for natural mouth movement.
 
 ## Render a narration
 

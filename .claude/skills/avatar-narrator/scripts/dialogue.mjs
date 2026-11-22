@@ -1,5 +1,5 @@
-// Two-person dialogue: Docker-hosted Kokoro voices -> Rhubarb -> cached avatars -> FFmpeg.
-// node dialogue.mjs <dialogue.json> [--audio-only]
+// Avatar dialogue: Docker-hosted Kokoro voices -> Rhubarb -> cached avatars -> FFmpeg.
+// node dialogue.mjs <dialogue.json> [--audio-only] [--overlay <duration>]
 import {execFileSync,spawnSync} from 'node:child_process';
 import {createHash,randomInt} from 'node:crypto';
 import {existsSync,mkdirSync,readFileSync,writeFileSync} from 'node:fs';
@@ -12,13 +12,21 @@ import {KOKORO_IMAGE,RHUBARB} from './lib.mjs';
 const HERE=dirname(fileURLToPath(import.meta.url));
 const ROOT=resolve(HERE,'../../../..');
 const input=resolve(process.argv[2]??'');
-if(!process.argv[2])throw Error('Usage: dialogue.mjs dialogue.json [--audio-only]');
+if(!process.argv[2])throw Error('Usage: dialogue.mjs dialogue.json [--audio-only] [--overlay <duration>]');
 const dir=dirname(input),job=JSON.parse(readFileSync(input,'utf8'));
 if(!dir.startsWith(join(ROOT,'.scratch/videos')+'/'))throw Error('Place dialogue jobs below .scratch/videos');
 const actors=Object.entries(job.actors??{});
+const overlayIndex=process.argv.indexOf('--overlay',3);
+const overlay=overlayIndex!==-1;
+const targetDuration=overlay ? Number(process.argv[overlayIndex+1]) : null;
+if(overlay&&!(targetDuration>0&&Number.isFinite(targetDuration)))throw Error('Overlay needs a positive duration in seconds');
 const layout=job.layout??'panels';
 if(!['panels','circles'].includes(layout))throw Error('layout must be panels or circles');
-if(!(layout==='circles'?[2,3,4]:[2]).includes(actors.length))throw Error('Use 2 actors for panels or 2 to 4 for circles');
+if(overlay){
+ if(actors.length<1||actors.length>4)throw Error('Use 1 to 4 actors for an overlay');
+}else if(!(layout==='circles'?[2,3,4]:[2]).includes(actors.length)){
+ throw Error('Use 2 actors for panels or 2 to 4 for circles');
+}
 const identifier=/^[a-zA-Z][a-zA-Z0-9_-]*$/;
 for(const [id,actor] of actors)if(!identifier.test(id)||!actor.avatar||!actor.label)throw Error('Actor id/avatar/label required');
 if(!Array.isArray(job.lines)||!job.lines.length)throw Error('Dialogue lines required');
@@ -30,7 +38,10 @@ const language=new Intl.Locale(job.language??'fr-FR').language;
 const femaleVoices=['bf_alice','bf_emma','bf_isabella','bf_lily'];
 const maleVoices=['bm_daniel','bm_george','bm_fable','bm_lewis'];
 const englishVoices={woman:femaleVoices,man:maleVoices,neutral:[...femaleVoices,...maleVoices]};
-const fps=25,lead=job.leadIn??.8,gap=job.gap??.6,tail=job.tail??1.2;
+if(overlay&&job.lines.some(line=>!Number.isFinite(line.start)||line.start<0||line.start>=targetDuration)){
+ throw Error('Each overlay line needs a start within the capture');
+}
+const fps=25,lead=overlay ? 0 : job.leadIn??.8,gap=overlay ? 0 : job.gap??.6,tail=overlay ? 0 : job.tail??1.2;
 for(const n of [lead,gap,tail])if(!Number.isFinite(n)||n<0)throw Error('Invalid silence duration');
 const run=(cmd,args)=>execFileSync(cmd,args,{cwd:dir,encoding:'utf8',maxBuffer:64*1024*1024});
 const write=(name,data)=>writeFileSync(join(dir,name),JSON.stringify(data,null,2)+'\n');
@@ -79,6 +90,13 @@ if(lead>0)concat.push('lead.wav');
 let cursor=lead;
 let kokoroReady;
 for(const [index,line] of job.lines.entries()){
+ if(overlay&&line.start<cursor-.0001)throw Error('Speech overlaps the previous line: '+line.id);
+ if(overlay&&line.start>cursor){
+  const padding=`.overlay-before-${index}.wav`;
+  silence(padding,line.start-cursor);
+  concat.push(padding);
+  cursor=line.start;
+ }
  const {voice,speed,pitch}=voiceSelection[line.speaker];
  const spokenText=line.spokenText??line.text;
  const settings={engine,image:KOKORO_IMAGE,voice,speed,pitch,text:spokenText};
@@ -101,12 +119,18 @@ for(const [index,line] of job.lines.entries()){
  }
  const seconds=duration(wav);
  if(!(seconds>.1))throw Error('Empty speech: '+line.id);
+ if(overlay&&cursor+seconds>targetDuration+.0001)throw Error('Speech exceeds the capture duration: '+line.id);
  timeline.push({...line,spokenText,voice,start:cursor,end:cursor+seconds,duration:seconds});
  concat.push(`${line.id}.wav`);cursor+=seconds;
  if(index<job.lines.length-1&&gap>0){concat.push('gap.wav');cursor+=gap;}
  stage('speech-line-ready',{line:line.id,completed:index+1,total:job.lines.length,duration:seconds,cached});
 }
-if(tail>0)concat.push('tail.wav');
+if(overlay&&targetDuration>cursor){
+ silence('.overlay-tail.wav',targetDuration-cursor);
+ concat.push('.overlay-tail.wav');
+}else if(tail>0){
+ concat.push('tail.wav');
+}
 writeFileSync(join(dir,'voice/concat.txt'),concat.map(name=>`file '${name}'`).join('\n')+'\n');
 ff(['-f','concat','-safe','0','-i',join(dir,'voice/concat.txt'),'-c','copy',join(dir,'voice.wav')]);
 const total=duration(join(dir,'voice.wav'));
@@ -143,12 +167,29 @@ for(const [index,line] of timeline.entries()){
 const avatarReports=[];
 for(const [index,[id,actor]] of actors.entries()){
  write(`${id}-cues.json`,{mouthCues:cuesByActor[id]});
- const avatarJob={avatar:actor.avatar,cues:`${id}-cues.json`,output:`actors/${id}`,duration:total,fps,size:540,samples:32,blinkStart:1.8+index*1.3,expressions:[],headMotion:actor.headMotion??[],lighting:actor.lighting??job.lighting??(layout==='circles'?'soft':'studio')};
+ const avatarJob={
+  avatar:actor.avatar,
+  cues:`${id}-cues.json`,
+  output:`actors/${id}`,
+  duration:total,
+  fps,
+  size:540,
+  samples:32,
+  blink:actor.blink,
+  blinkStart:actor.blinkStart??(1.8+index*1.3),
+  expressions:actor.expressions??[],
+  headMotion:actor.headMotion??[],
+  lighting:actor.lighting??job.lighting??(overlay||layout==='circles'?'soft':'studio')
+ };
  write(`${id}-avatar.json`,avatarJob);
  stage('rendering-avatar',{speaker:id,avatar:actor.avatar});
  const report=renderAvatar(avatarJob,dir);avatarReports.push({speaker:id,...report});
 }
 write('avatar-reports.json',avatarReports);
+if(overlay){
+ stage('overlay-assets-ready',{duration:total,actors:actors.length});
+ process.exit(0);
+}
 stage('composing',{duration:total});
 if(layout==='circles'){
  run('python3',[join(HERE,'compose_circles.py'),dir,input]);

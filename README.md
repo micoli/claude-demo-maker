@@ -1,8 +1,8 @@
-# Avatar Narrator
+# Claude Demo Maker
 
-Skill Claude Code pour faire parler des avatars Blender à partir d’un texte ou d’un enregistrement, avec synchronisation labiale. Le dépôt contient les scripts et les 30 avatars réutilisables.
+Deux skills Claude Code pour produire des démonstrations vidéo. `/demo-maker` enregistre un parcours web avec Playwright et incruste un dialogue de 1 à 4 intervenants. `/avatar-narrator` fait parler des avatars Blender à partir d’un texte ou d’un enregistrement. Le dépôt contient les scripts et 30 avatars réutilisables.
 
-## Installer la skill
+## Installer les skills
 
 1. Installe [Claude Code](https://code.claude.com/docs/en/setup#install-claude-code).
 2. Clone le dépôt en remplaçant `URL_DU_DEPOT` par son URL de publication.
@@ -12,14 +12,14 @@ Skill Claude Code pour faire parler des avatars Blender à partir d’un texte o
    cd claude-demo-maker
    ```
 
-3. Lance `claude` depuis cette racine. Dans la session, tape `/avatar-narrator` pour retrouver la commande. Claude Code découvre automatiquement la skill dans `.claude/skills/avatar-narrator/SKILL.md` et peut aussi l’activer à partir d’une demande en langage naturel. [Documentation des skills Claude Code](https://code.claude.com/docs/en/skills)
+3. Lance `claude` depuis cette racine. Dans la session, tape `/demo-maker` ou `/avatar-narrator`. Claude Code découvre automatiquement les skills sous `.claude/skills/` et peut aussi les activer à partir d’une demande en langage naturel. [Documentation des skills Claude Code](https://code.claude.com/docs/en/skills)
 
-Pour installer la skill dans un autre dépôt, exécute ces commandes à la racine du clone. Remplace le chemin de destination par la racine de ton projet.
+Pour installer les deux skills dans un autre dépôt, exécute ces commandes à la racine du clone. Remplace le chemin de destination par la racine de ton projet.
 
 ```bash
 target_repo="/chemin/vers/autre-projet"
 mkdir -p "$target_repo/.claude/skills"
-cp -R .claude/skills/avatar-narrator "$target_repo/.claude/skills/"
+cp -R .claude/skills/avatar-narrator .claude/skills/demo-maker "$target_repo/.claude/skills/"
 ```
 
 Lance ensuite Claude Code depuis le dépôt de destination. Les scripts calculent la racine de travail à partir de l’emplacement de la skill, donc conserve l’arborescence `.claude/skills/avatar-narrator/` du projet. Ajoute `.scratch/` à son `.gitignore` pour garder les rendus et le cache hors de Git.
@@ -63,7 +63,18 @@ docker info
 claude
 ```
 
-## Faire un premier essai
+## Installer Playwright pour les démos web
+
+Depuis la racine qui contient les deux skills, installe Playwright dans le dossier de travail local et télécharge le Chromium correspondant.
+
+```bash
+npm install --prefix .scratch/demo-playwright playwright@1.64.1
+npm --prefix .scratch/demo-playwright exec -- playwright install chromium
+```
+
+Lance Claude Code depuis une session locale avec accès à l’interface graphique, puis tape `/demo-maker`. Après le brief, un navigateur Chromium et Playwright Inspector s’ouvrent. Dans Inspector, clique sur **Record**, effectue le parcours dans l’onglet principal, arrête l’enregistrement des actions et copie le JavaScript dans un fichier du dossier de la démo. Clique ensuite sur **Resume** pour fermer la prise et sauvegarder la vidéo. Claude proposera un dialogue avant le rendu. [Guide de la skill demo-maker](.claude/skills/demo-maker/SKILL.md)
+
+## Faire un premier essai avec Avatar Narrator
 
 Dans Claude Code, envoie cette demande pour tester l’activation automatique et produire un court rendu.
 
