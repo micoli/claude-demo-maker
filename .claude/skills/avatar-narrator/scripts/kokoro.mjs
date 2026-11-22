@@ -11,6 +11,7 @@ const healthy = async () => {
 
 export const ensureKokoro = async () => {
   if (await healthy()) return;
+  if (process.env.KOKORO_URL) throw new Error(`Kokoro unreachable at ${KOKORO_URL}`);
   ensureDocker();
   const name = 'kokoro-demo-maker';
   const state = spawnSync('docker', ['inspect', '--format', '{{.State.Running}}', name], { encoding: 'utf8' });

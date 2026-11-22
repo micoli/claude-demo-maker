@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 export const SKILL_DIR = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const REPO = resolve(SKILL_DIR, '../../..');
 export const KOKORO_IMAGE = 'ghcr.io/remsky/kokoro-fastapi-cpu:v0.10.0';
-export const KOKORO_URL = 'http://localhost:8880';
+export const KOKORO_URL = process.env.KOKORO_URL ?? 'http://localhost:8880';
 export const RHUBARB = process.env.RHUBARB_BIN ?? join(SKILL_DIR, 'vendor/rhubarb/rhubarb');
 
 export const videoDir = (feature) => {
