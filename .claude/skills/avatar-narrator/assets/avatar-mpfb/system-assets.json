@@ -1,0 +1,210 @@
+{
+  "source": "https://files2.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip",
+  "files": [
+    {
+      "file": "teeth/teeth_base/teeth_base.obj",
+      "crc32": 1512583142,
+      "sha256": "f55198069e55d360c4b4cc7ecb1cc292b2c7665753ab8b65eabf46a8783f2875"
+    },
+    {
+      "file": "teeth/teeth_base/teeth_base.mhclo",
+      "crc32": 3551084828,
+      "sha256": "9edc3deff3bb97a95c791878064dd069a74a38f95ea6d9707a9ba68d888b3b5c"
+    },
+    {
+      "file": "eyelashes/eyelashes01/eyelashes01.obj",
+      "crc32": 3313467970,
+      "sha256": "f78f5b93fea1946fcae103d32c4f082dd9612a1ec2e7e2f90b03ebe59b0baf20"
+    },
+    {
+      "file": "teeth/teeth_base/teeth.mhmat",
+      "crc32": 100449754,
+      "sha256": "3baeff72d9eb06ca16c3cff7ca2ab304216717dee247e0d88f1dc33037c8320e"
+    },
+    {
+      "file": "eyelashes/eyelashes01/eyelashes01.mhmat",
+      "crc32": 2384260682,
+      "sha256": "8029c99d94f3d87a1e81825fad6b90eec773ae6955a5b2592222ef237377e190"
+    },
+    {
+      "file": "hair/short01/short01.mhclo",
+      "crc32": 2069295345,
+      "sha256": "ae1ffaa98da5753b803b3a173bede4895d2215e6bb94763f3765a71f0e984f35"
+    },
+    {
+      "file": "hair/short01/short01.mhmat",
+      "crc32": 1479685553,
+      "sha256": "01e2e12ce3f3d3c859225456660acadcdd27d4f4b4d888bcbd6f11998cadd975"
+    },
+    {
+      "file": "hair/short01/short01.obj",
+      "crc32": 98592969,
+      "sha256": "d998d8416f9b5d5591f1d756f4d292288d000a6951bc0f4d2e8e72727bbc44fa"
+    },
+    {
+      "file": "eyelashes/eyelashes01/eyelashes01.mhclo",
+      "crc32": 1539840392,
+      "sha256": "5a86b29c15649273d723084954b7fa7bf199112571d4f58539b46734d397ee6b"
+    },
+    {
+      "file": "eyelashes/eyelashes01/eyelashes01.png",
+      "crc32": 3377491695,
+      "sha256": "4b69c0fff2648874460e9caf80c31413c444218a5c50afebc425aeaa65484a35"
+    },
+    {
+      "file": "hair/bob01/bob01.mhmat",
+      "crc32": 1498726963,
+      "sha256": "9c3015044a832fb9a72a5d2f28218914ebfbdf6725cfd237cc53a3d95f054e3b"
+    },
+    {
+      "file": "hair/bob01/bob01.mhclo",
+      "crc32": 3818770036,
+      "sha256": "a295b11ab6c7808afa1e01d0c79fb595bbbd7885f65252766486c9fcf6d158c5"
+    },
+    {
+      "file": "hair/bob01/bob01.obj",
+      "crc32": 2655678121,
+      "sha256": "d7fb73806f47ee37ba3c37bcfadff40a91ba99635d08c3e02d94b4acbf97c231"
+    },
+    {
+      "file": "tongue/tongue01/tongue01.obj",
+      "crc32": 1118128776,
+      "sha256": "12f4a6a9f85abae2ce3b4aa42d8119e1f679a437e0e89cb928ec68b29a7a1587"
+    },
+    {
+      "file": "tongue/tongue01/tongue01.mhmat",
+      "crc32": 3616849708,
+      "sha256": "7769df66c69b8c09a0ec713d70d8381abbb08ac82207369f5413970495cd4340"
+    },
+    {
+      "file": "teeth/teeth_base/teeth.png",
+      "crc32": 3203849251,
+      "sha256": "d0afb57869c6fbb56b98f5efc4aec629ee7593e70d8dd2bfb9de923acfb65f43"
+    },
+    {
+      "file": "tongue/tongue01/tongue01_diffuse.png",
+      "crc32": 2338159375,
+      "sha256": "3150be398e48e8ba1feac164c3143c16c0b2e959d9ffb6155f0171f59cfb4ea9"
+    },
+    {
+      "file": "tongue/tongue01/tongue01.mhclo",
+      "crc32": 388477905,
+      "sha256": "61d825899cd78ff3146fa1324118060cb44b095fae1427d408c199ade74e3c9e"
+    },
+    {
+      "file": "eyebrows/eyebrow001/eyebrow001.obj",
+      "crc32": 132765174,
+      "sha256": "88b13146395133f3901715e11706cdfd293e5d6087ad7c5e01efe1485a26b513"
+    },
+    {
+      "file": "eyebrows/eyebrow001/eyebrow001.mhclo",
+      "crc32": 1496989710,
+      "sha256": "54c8892c2ba577f4152d779ce1f20f7cd323beb8cbd9cb701796165c221b4f5b"
+    },
+    {
+      "file": "eyebrows/eyebrow001/eyebrow001.mhmat",
+      "crc32": 1674605508,
+      "sha256": "976e5f4f1d3922d7a11c6e2db233f8b4584b068d00619d5749687e81c92d61fc"
+    },
+    {
+      "file": "eyes/materials/brown.mhmat",
+      "crc32": 2179107890,
+      "sha256": "4abad93ce50541c08127721e77bce035640c9f16bed16cd0f5524b1cd5908465"
+    },
+    {
+      "file": "eyebrows/eyebrow001/eyebrow001.png",
+      "crc32": 3589177450,
+      "sha256": "9940f7d0b1b223709a19b05156ba6f6e9e4dbdbced02d7574f4d51d72c58967b"
+    },
+    {
+      "file": "eyes/low-poly/low-poly.mhclo",
+      "crc32": 4159985196,
+      "sha256": "68582e28e9176cba7cfcf35208f671b6201b8d1bc95c32decff61a3160ec34d8"
+    },
+    {
+      "file": "eyes/low-poly/low-poly.obj",
+      "crc32": 2028967984,
+      "sha256": "783fe1e6331162c876520b4c2bed7a8ca06354ca15497e8ebd68bb1b59f4d3de"
+    },
+    {
+      "file": "hair/short01/short01_diffuse.png",
+      "crc32": 2320943918,
+      "sha256": "f34a0957184e3d1e911ed59245f874f8d4843f61ee44ff49f43edb4be0196949"
+    },
+    {
+      "file": "eyes/materials/brown_eye.png",
+      "crc32": 1664999219,
+      "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b"
+    },
+    {
+      "file": "hair/bob01/bob01_diffuse.png",
+      "crc32": 1656468869,
+      "sha256": "2b38bc7a028e06e8e633accb7fe2dd1b2bacbb9d32463df73f39f82e63ef9009"
+    },
+    {
+      "file": "hair/ponytail01/ponytail01.mhmat",
+      "crc32": 1099673810,
+      "sha256": "b145f5a7c9606859ad523f5113482a1cf989cf0e26dccc2ea95c377cb1c2557f"
+    },
+    {
+      "file": "hair/ponytail01/ponytail01.mhclo",
+      "crc32": 1792184878,
+      "sha256": "97fc50b12bcb3b1c7b33edddd8d427a2604ffb06fe79b31132bf47f82d7afbac"
+    },
+    {
+      "file": "hair/ponytail01/ponytail01.obj",
+      "crc32": 2835480296,
+      "sha256": "d9f5fe96fbedbc8006220d87aad0e4a33d15286eb6b21f5929661cdc490ebf5a"
+    },
+    {
+      "file": "hair/ponytail01/ponytail01_diffuse.png",
+      "crc32": 3412443288,
+      "sha256": "dcb364300cac06ce8bef91b2f7c0970baf310898bbdd06b0c6b884ee9306eb97"
+    },
+    {
+      "file": "hair/afro01/afro01.mhmat",
+      "crc32": 3884771118,
+      "sha256": "6da1c6778df2450b135009274ed0145dc2dffbc5d8e287fc1d4c69ba539b483c"
+    },
+    {
+      "file": "hair/afro01/afro01.obj",
+      "crc32": 1663250277,
+      "sha256": "8344fffef15120a05a89219f31184ca2958537223fa885c885137ad1e97edcb8"
+    },
+    {
+      "file": "hair/short02/short02.mhclo",
+      "crc32": 377146603,
+      "sha256": "625736cdb73e6d094df6e5a2df18f371781f1d2cd37b0ae15795c5d7051c3ec2"
+    },
+    {
+      "file": "hair/afro01/afro01.mhclo",
+      "crc32": 1407668219,
+      "sha256": "9977bd4507e2dd1408504b7a39a6f585ffa2d3ba3aa40ad4bdc2844884bbebb5"
+    },
+    {
+      "file": "hair/short02/short02.mhmat",
+      "crc32": 367839644,
+      "sha256": "2ed04c8aad9c1a35d858ca72091525d32b1da3b61b5a031634dd528fd8530f6d"
+    },
+    {
+      "file": "hair/short02/short02.obj",
+      "crc32": 1005823987,
+      "sha256": "48f979114adfa712165a69cc55c45a70831af1fb3cba8e2a89120f0c87407b64"
+    },
+    {
+      "file": "hair/short02/short02_normal.png",
+      "crc32": 3449626045,
+      "sha256": "2cfac7619f8eec77dd90df979d912415058f4f0fc16940cba40a8eb1ae6d74b5"
+    },
+    {
+      "file": "hair/short02/short02_diffuse.png",
+      "crc32": 1488863504,
+      "sha256": "47fe33831a3929567c733356dd66243116e05df2ace1f884ddca0080b728229f"
+    },
+    {
+      "file": "hair/afro01/afro_diffuse.png",
+      "crc32": 953081953,
+      "sha256": "dc0db7dd8a13802f02303ca7e49844b219e09db134471b7061538a8af8f7c7fb"
+    }
+  ]
+}

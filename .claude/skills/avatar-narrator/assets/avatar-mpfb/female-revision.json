@@ -1,0 +1,14 @@
+{
+  "count": 10,
+  "status": "generated-and-checked",
+  "changes": [
+    "tapered jaw/chin",
+    "softer cheeks",
+    "slender neck",
+    "shaped brows",
+    "predominantly tied-back hair"
+  ],
+  "eyes_unobstructed": true,
+  "face_animation_cache_test": "woman-10: 60 frames; 8 cold renders; 0 warm renders",
+  "visual_approval": "awaiting user review"
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-22",
+  "test": "2.4-second synthetic cues; no speech audio",
+  "frames": 60,
+  "unique_states": 7,
+  "cold_rendered_states": 7,
+  "warm_rendered_states": 0,
+  "cold_seconds": 7.08,
+  "warm_seconds": 0.59,
+  "visual_approval": "pending",
+  "pilots": [
+    "pilot-man",
+    "pilot-woman"
+  ]
+}

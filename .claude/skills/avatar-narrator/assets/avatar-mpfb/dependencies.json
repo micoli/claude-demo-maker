@@ -1,0 +1,21 @@
+{
+  "downloads": [
+    {
+      "url": "https://github.com/makehumancommunity/mpfb2/archive/refs/tags/v2.0.18.zip",
+      "sha256": "ada7c4ff11e79cf6ed9b441bccabc52c9359f2848b988f66e89c14c30b21fed7",
+      "size": 45601989
+    },
+    {
+      "url": "https://github.com/makehumancommunity/extra-targets/archive/refs/heads/main.zip",
+      "sha256": "7b1f4e2afd00cfb25cbe31a1d5268cb71ef869c3f401c919bc028974c5bd3851",
+      "size": 586651
+    },
+    {
+      "url": "https://github.com/makehumancommunity/makehuman/archive/refs/heads/master.zip",
+      "sha256": "d1eda624cc0f5a13f23ac6a938fc3dd58f0819121ba086d6d98daf89a758f486",
+      "size": 45101009
+    }
+  ],
+  "system_pack_url": "https://files2.makehumancommunity.org/asset_packs/makehuman_system_assets/makehuman_system_assets_cc0.zip",
+  "pilot_status": "generated-awaiting-visual-review"
+}

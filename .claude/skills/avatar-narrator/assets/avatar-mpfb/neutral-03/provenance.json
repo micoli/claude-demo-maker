@@ -1,0 +1,124 @@
+{
+  "profile": {
+    "id": "neutral-03",
+    "group": "neutral",
+    "gender": 0.5,
+    "age": 0.48,
+    "weight": 0.48,
+    "muscle": 0.45,
+    "proportions": 0.48,
+    "race": {
+      "african": 0.25,
+      "asian": 0.15,
+      "caucasian": 0.6
+    },
+    "skin": "#bc8968",
+    "hair": "bald",
+    "hair_color": "#6f655e",
+    "shirt": "#66627f",
+    "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+    "details": {
+      "head/head-oval": 0.16,
+      "nose/nose-scale-horiz-incr": 0.17,
+      "chin/chin-bones-decr": 0.2,
+      "neck/neck-scale-horiz-decr": 0.1
+    }
+  },
+  "hair_eye_clearance": {
+    "protected": true,
+    "trimmed_faces": 0,
+    "passed": true,
+    "checked_angles_degrees": [
+      -30,
+      0,
+      30
+    ]
+  },
+  "generator": "mpfb",
+  "version": "2.0.18",
+  "id": "neutral-03",
+  "visual_approval": "pending",
+  "macro": {
+    "gender": 0.5,
+    "age": 0.48,
+    "muscle": 0.45,
+    "weight": 0.48,
+    "proportions": 0.48,
+    "height": 0.5,
+    "cupsize": 0.5,
+    "firmness": 0.5,
+    "race": {
+      "african": 0.25,
+      "asian": 0.15,
+      "caucasian": 0.6
+    }
+  },
+  "assets": [
+    {
+      "file": "eyes/low-poly/low-poly.mhclo",
+      "type": "Eyes",
+      "license": "CC0"
+    },
+    {
+      "file": "eyebrows/eyebrow001/eyebrow001.mhclo",
+      "type": "Eyebrows",
+      "license": "CC0"
+    },
+    {
+      "file": "eyelashes/eyelashes01/eyelashes01.mhclo",
+      "type": "Eyelashes",
+      "license": "CC0"
+    },
+    {
+      "file": "teeth/teeth_base/teeth_base.mhclo",
+      "type": "Teeth",
+      "license": "CC0"
+    },
+    {
+      "file": "tongue/tongue01/tongue01.mhclo",
+      "type": "Tongue",
+      "license": "CC0"
+    }
+  ],
+  "controls": {
+    "visemes": {
+      "A": "viseme_PP",
+      "B": "viseme_SS",
+      "C": "viseme_E",
+      "D": "viseme_aa",
+      "E": "viseme_O",
+      "F": "viseme_U",
+      "G": "viseme_FF",
+      "H": "viseme_nn",
+      "X": "viseme_sil"
+    },
+    "blink": {
+      "eyeBlinkLeft": 1,
+      "eyeBlinkRight": 1
+    },
+    "expressions": {
+      "neutral": {},
+      "warm": {
+        "mouthSmileLeft": 0.3,
+        "mouthSmileRight": 0.3,
+        "cheekSquintLeft": 0.15,
+        "cheekSquintRight": 0.15
+      },
+      "concerned": {
+        "browInnerUp": 0.35,
+        "browDownLeft": 0.2,
+        "browDownRight": 0.2
+      },
+      "surprised": {
+        "browInnerUp": 0.45,
+        "browOuterUpLeft": 0.4,
+        "browOuterUpRight": 0.4,
+        "eyeWideLeft": 0.3,
+        "eyeWideRight": 0.3
+      }
+    }
+  },
+  "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
+  "geometry_license": "CC0-1.0",
+  "triangles": 17408
+}

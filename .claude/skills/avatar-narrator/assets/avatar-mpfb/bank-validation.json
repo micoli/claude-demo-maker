@@ -1,0 +1,207 @@
+{
+  "avatars": [
+    {
+      "id": "man-01",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 21070
+    },
+    {
+      "id": "man-02",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 19516
+    },
+    {
+      "id": "man-03",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 17376
+    },
+    {
+      "id": "man-04",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 20706
+    },
+    {
+      "id": "man-05",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 21130
+    },
+    {
+      "id": "man-06",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 20838
+    },
+    {
+      "id": "man-07",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 22400
+    },
+    {
+      "id": "man-08",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 21078
+    },
+    {
+      "id": "man-09",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 19524
+    },
+    {
+      "id": "man-10",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 17368
+    },
+    {
+      "id": "neutral-01",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 19652,
+      "source_sha256": "50af96d6ef07dada23bbc3a2630afabe8c254e0bcdd30aee726577c77186e63f"
+    },
+    {
+      "id": "neutral-02",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 21070,
+      "source_sha256": "3cc4fc4f86adfba87bbef763bea90974d68c5b7455f268a40acd4942835a7bba"
+    },
+    {
+      "id": "neutral-03",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 17408,
+      "source_sha256": "790320e6968cd5debf2e3b196965d4f0183d818f6673c73b0aac8c79286b0afc"
+    },
+    {
+      "id": "neutral-04",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 22740,
+      "source_sha256": "616105b84f422bd8659b8521ead29ba36ca1b2d601a85b69ba4757c1c3ff0376"
+    },
+    {
+      "id": "neutral-05",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 20870,
+      "source_sha256": "bae4b8d8e653de510fd0f769318a63a3a4e56aafbc1d52f59f2438cf93e9b2f6"
+    },
+    {
+      "id": "neutral-06",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 21162,
+      "source_sha256": "c45075127c51e59f96f3ab25912dc9d4a36d5f09ab8bee57e89a2ec7e9fb0aeb"
+    },
+    {
+      "id": "neutral-07",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 22834,
+      "source_sha256": "55e59544966c28b2b23e50fe2c85032c7eb9af1d3eb3a2af467f5856c4b3d1db"
+    },
+    {
+      "id": "neutral-08",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 17448,
+      "source_sha256": "23293a5bc8f51f4f906b120da65100cd383241544e7b5be25f71197ab3521378"
+    },
+    {
+      "id": "neutral-09",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 19608,
+      "source_sha256": "7b99dbbbd69d7fe0e1dd3d92d8236f6f6b82e3cd91c99b1993481c156980e810"
+    },
+    {
+      "id": "neutral-10",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 20728,
+      "source_sha256": "2a7de0b0e082a8ae15707bf3ac3e5f144bb5d1da6d205948f12ddd407edf9b19"
+    },
+    {
+      "id": "woman-01",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 19652,
+      "source_sha256": "73bdebc558c3da26a6384ea94ed800c9a67b4ef7c2b2b0e55fb360f5a0f4d53d"
+    },
+    {
+      "id": "woman-02",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 22770,
+      "source_sha256": "d86497592aa1da7fbd9efd35345cda3f4d461c1a69db7d65669625e79f352a08"
+    },
+    {
+      "id": "woman-03",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 22910,
+      "source_sha256": "19aaa6a097e1049b691903c491e178c6d0df5898cfd4de8ceba1309668353262"
+    },
+    {
+      "id": "woman-04",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 23016,
+      "source_sha256": "3628a6155291a10d3063f4b55081e1dd01587914cb39298bf88bf9791ee27b5a"
+    },
+    {
+      "id": "woman-05",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 20852,
+      "source_sha256": "d80a2f44836e12d5f36d16baa8afe95f11038bf0602b2dfd1f6011d62aeb5153"
+    },
+    {
+      "id": "woman-06",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 23038,
+      "source_sha256": "f3156885049975da1c55d69d50292d82f3fe77d316d433c0efbe18fe831c2bcb"
+    },
+    {
+      "id": "woman-07",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 22898,
+      "source_sha256": "2710f1bf4a140b513b210f1adab89f669a16d7f73c4a49a293d27d2decab5829"
+    },
+    {
+      "id": "woman-08",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 22806,
+      "source_sha256": "d341390dfc369b3dbb13f64ff93615744a579ea3e5956f3a430f35b0e7e68c47"
+    },
+    {
+      "id": "woman-09",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 19760,
+      "source_sha256": "1a2ff25a04c20fbf020227ff23ba872f8d4ce746a043992b31ad2cd9f5a4d58c"
+    },
+    {
+      "id": "woman-10",
+      "facial_morphs": 67,
+      "hair_clearance": true,
+      "triangles": 22826,
+      "source_sha256": "344b9e54f5dc3e6be672e46c8a1f9b1711c3eb2e530dc0f6e35ab1ae2e5f204d"
+    }
+  ],
+  "count": 30,
+  "checks": "Native facial keys, embedded GLB textures, eye clearance at -30/0/30 degrees, fixed heads, front/three-quarter views",
+  "speech_audio_tested": false
+}

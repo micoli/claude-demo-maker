@@ -1,0 +1,27 @@
+{
+  "count": 10,
+  "total_bank": 30,
+  "status": "generated-and-checked",
+  "ids": [
+    "neutral-01",
+    "neutral-02",
+    "neutral-03",
+    "neutral-04",
+    "neutral-05",
+    "neutral-06",
+    "neutral-07",
+    "neutral-08",
+    "neutral-09",
+    "neutral-10"
+  ],
+  "hairstyles": [
+    "afro01",
+    "bald",
+    "ponytail01",
+    "short01",
+    "short02"
+  ],
+  "eyes_unobstructed": true,
+  "visual_approval": "awaiting user review",
+  "audio_tested": false
+}

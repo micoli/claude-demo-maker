@@ -1,0 +1,42 @@
+{
+  "audioTested": false,
+  "test": "synthetic mouth cues, all four expressions, blink, cold/warm cache",
+  "reports": [
+    {
+      "avatar": "man-01",
+      "frames": 60,
+      "states": 8,
+      "coldRendered": 8,
+      "warmRendered": 0,
+      "coldSeconds": 6.1616212919999995,
+      "warmSeconds": 0.48066866600000047
+    },
+    {
+      "avatar": "woman-10",
+      "frames": 60,
+      "states": 8,
+      "coldRendered": 8,
+      "warmRendered": 0,
+      "coldSeconds": 5.734452125,
+      "warmSeconds": 0.3288505829999995
+    },
+    {
+      "avatar": "neutral-01",
+      "frames": 60,
+      "states": 8,
+      "coldRendered": 8,
+      "warmRendered": 0,
+      "coldSeconds": 5.974664292000001,
+      "warmSeconds": 0.35651487499999984
+    },
+    {
+      "avatar": "neutral-10",
+      "frames": 60,
+      "states": 8,
+      "coldRendered": 8,
+      "warmRendered": 0,
+      "coldSeconds": 4.580078333,
+      "warmSeconds": 0.30347108300000036
+    }
+  ]
+}

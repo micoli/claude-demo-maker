@@ -1,0 +1,815 @@
+{
+  "version": 1,
+  "avatars": [
+    {
+      "id": "man-01",
+      "gender": 1,
+      "age": 0.4,
+      "weight": 0.36,
+      "muscle": 0.39,
+      "proportions": 0.4,
+      "race": {
+        "african": 0.85,
+        "asian": 0.05,
+        "caucasian": 0.1
+      },
+      "skin": "#67422f",
+      "hair": "short01",
+      "hair_color": "#211a16",
+      "shirt": "#36546b",
+      "details": {
+        "nose/nose-scale-horiz-incr": 0.1,
+        "head/head-round": 0.08
+      }
+    },
+    {
+      "id": "man-02",
+      "gender": 1,
+      "age": 0.55,
+      "weight": 0.425,
+      "muscle": 0.46,
+      "proportions": 0.44,
+      "race": {
+        "african": 0.65,
+        "asian": 0.15,
+        "caucasian": 0.2
+      },
+      "skin": "#875239",
+      "hair": "afro01",
+      "hair_color": "#30211b",
+      "shirt": "#4e6b60",
+      "details": {
+        "nose/nose-scale-horiz-decr": 0.145,
+        "head/head-oval": 0.115
+      }
+    },
+    {
+      "id": "man-03",
+      "gender": 1,
+      "age": 0.46,
+      "weight": 0.49,
+      "muscle": 0.53,
+      "proportions": 0.48,
+      "race": {
+        "african": 0.3,
+        "asian": 0.1,
+        "caucasian": 0.6
+      },
+      "skin": "#c3916b",
+      "hair": "bald",
+      "hair_color": "#503426",
+      "shirt": "#7c5650",
+      "details": {
+        "nose/nose-scale-horiz-incr": 0.19,
+        "head/head-oval": 0.15
+      }
+    },
+    {
+      "id": "man-04",
+      "gender": 1,
+      "age": 0.66,
+      "weight": 0.555,
+      "muscle": 0.39,
+      "proportions": 0.52,
+      "race": {
+        "african": 0.15,
+        "asian": 0.15,
+        "caucasian": 0.7
+      },
+      "skin": "#c59b7a",
+      "hair": "short02",
+      "hair_color": "#2b211c",
+      "shirt": "#535773",
+      "details": {
+        "nose/nose-scale-horiz-decr": 0.235,
+        "head/head-round": 0.185
+      }
+    },
+    {
+      "id": "man-05",
+      "gender": 1,
+      "age": 0.42,
+      "weight": 0.36,
+      "muscle": 0.46,
+      "proportions": 0.56,
+      "race": {
+        "african": 0.2,
+        "asian": 0.65,
+        "caucasian": 0.15
+      },
+      "skin": "#9d714f",
+      "hair": "short01",
+      "hair_color": "#221a18",
+      "shirt": "#79736a",
+      "details": {
+        "nose/nose-scale-horiz-incr": 0.1,
+        "head/head-oval": 0.22
+      }
+    },
+    {
+      "id": "man-06",
+      "gender": 1,
+      "age": 0.38,
+      "weight": 0.425,
+      "muscle": 0.53,
+      "proportions": 0.4,
+      "race": {
+        "african": 0.05,
+        "asian": 0.9,
+        "caucasian": 0.05
+      },
+      "skin": "#dbaf8c",
+      "hair": "short02",
+      "hair_color": "#151719",
+      "shirt": "#36546b",
+      "details": {
+        "nose/nose-scale-horiz-decr": 0.145,
+        "head/head-oval": 0.08
+      }
+    },
+    {
+      "id": "man-07",
+      "gender": 1,
+      "age": 0.57,
+      "weight": 0.49,
+      "muscle": 0.39,
+      "proportions": 0.44,
+      "race": {
+        "african": 0.2,
+        "asian": 0.7,
+        "caucasian": 0.1
+      },
+      "skin": "#bb8b62",
+      "hair": "ponytail01",
+      "hair_color": "#3d2720",
+      "shirt": "#4e6b60",
+      "details": {
+        "nose/nose-scale-horiz-incr": 0.19,
+        "head/head-round": 0.115
+      }
+    },
+    {
+      "id": "man-08",
+      "gender": 1,
+      "age": 0.72,
+      "weight": 0.555,
+      "muscle": 0.46,
+      "proportions": 0.48,
+      "race": {
+        "african": 0.03,
+        "asian": 0.07,
+        "caucasian": 0.9
+      },
+      "skin": "#e6c0a4",
+      "hair": "short01",
+      "hair_color": "#ad8060",
+      "shirt": "#7c5650",
+      "details": {
+        "nose/nose-scale-horiz-decr": 0.235,
+        "head/head-oval": 0.15
+      }
+    },
+    {
+      "id": "man-09",
+      "gender": 1,
+      "age": 0.49,
+      "weight": 0.36,
+      "muscle": 0.53,
+      "proportions": 0.52,
+      "race": {
+        "african": 0.35,
+        "asian": 0.15,
+        "caucasian": 0.5
+      },
+      "skin": "#b58566",
+      "hair": "afro01",
+      "hair_color": "#65514b",
+      "shirt": "#535773",
+      "details": {
+        "nose/nose-scale-horiz-incr": 0.1,
+        "head/head-oval": 0.185
+      }
+    },
+    {
+      "id": "man-10",
+      "gender": 1,
+      "age": 0.6,
+      "weight": 0.425,
+      "muscle": 0.39,
+      "proportions": 0.56,
+      "race": {
+        "african": 0.45,
+        "asian": 0.35,
+        "caucasian": 0.2
+      },
+      "skin": "#a4714f",
+      "hair": "bald",
+      "hair_color": "#857d72",
+      "shirt": "#79736a",
+      "details": {
+        "nose/nose-scale-horiz-decr": 0.145,
+        "head/head-round": 0.22
+      }
+    },
+    {
+      "id": "woman-01",
+      "gender": 0,
+      "age": 0.46,
+      "weight": 0.36,
+      "muscle": 0.3,
+      "proportions": 0.4,
+      "race": {
+        "african": 0.85,
+        "asian": 0.05,
+        "caucasian": 0.1
+      },
+      "skin": "#67422f",
+      "hair": "afro01",
+      "hair_color": "#2b211c",
+      "shirt": "#36546b",
+      "details": {
+        "nose/nose-scale-horiz-incr": 0.1,
+        "head/head-round": 0.08,
+        "chin/chin-bones-decr": 0.58,
+        "chin/chin-width-decr": 0.38,
+        "chin/chin-prominent-decr": 0.22,
+        "chin/chin-height-decr": 0.14,
+        "neck/neck-scale-horiz-decr": 0.28,
+        "neck/neck-scale-depth-decr": 0.12,
+        "cheek/l-cheek-volume-incr": 0.2,
+        "cheek/r-cheek-volume-incr": 0.2,
+        "cheek/l-cheek-bones-incr": 0.12,
+        "cheek/r-cheek-bones-incr": 0.12,
+        "eyebrows/eyebrows-angle-up": 0.12,
+        "eyebrows/eyebrows-trans-up": 0.08,
+        "nose/nose-volume-decr": 0.08
+      },
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    },
+    {
+      "id": "woman-02",
+      "gender": 0,
+      "age": 0.66,
+      "weight": 0.425,
+      "muscle": 0.335,
+      "proportions": 0.44,
+      "race": {
+        "african": 0.65,
+        "asian": 0.15,
+        "caucasian": 0.2
+      },
+      "skin": "#875239",
+      "hair": "ponytail01",
+      "hair_color": "#221a18",
+      "shirt": "#4e6b60",
+      "details": {
+        "nose/nose-scale-horiz-decr": 0.145,
+        "head/head-oval": 0.115,
+        "chin/chin-bones-decr": 0.58,
+        "chin/chin-width-decr": 0.38,
+        "chin/chin-prominent-decr": 0.22,
+        "chin/chin-height-decr": 0.14,
+        "neck/neck-scale-horiz-decr": 0.28,
+        "neck/neck-scale-depth-decr": 0.12,
+        "cheek/l-cheek-volume-incr": 0.2,
+        "cheek/r-cheek-volume-incr": 0.2,
+        "cheek/l-cheek-bones-incr": 0.12,
+        "cheek/r-cheek-bones-incr": 0.12,
+        "eyebrows/eyebrows-angle-up": 0.12,
+        "eyebrows/eyebrows-trans-up": 0.08,
+        "nose/nose-volume-decr": 0.08
+      },
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    },
+    {
+      "id": "woman-03",
+      "gender": 0,
+      "age": 0.42,
+      "weight": 0.49,
+      "muscle": 0.37,
+      "proportions": 0.48,
+      "race": {
+        "african": 0.3,
+        "asian": 0.1,
+        "caucasian": 0.6
+      },
+      "skin": "#c3916b",
+      "hair": "ponytail01",
+      "hair_color": "#151719",
+      "shirt": "#7c5650",
+      "details": {
+        "nose/nose-scale-horiz-incr": 0.19,
+        "head/head-oval": 0.15,
+        "chin/chin-bones-decr": 0.58,
+        "chin/chin-width-decr": 0.38,
+        "chin/chin-prominent-decr": 0.22,
+        "chin/chin-height-decr": 0.14,
+        "neck/neck-scale-horiz-decr": 0.28,
+        "neck/neck-scale-depth-decr": 0.12,
+        "cheek/l-cheek-volume-incr": 0.2,
+        "cheek/r-cheek-volume-incr": 0.2,
+        "cheek/l-cheek-bones-incr": 0.12,
+        "cheek/r-cheek-bones-incr": 0.12,
+        "eyebrows/eyebrows-angle-up": 0.12,
+        "eyebrows/eyebrows-trans-up": 0.08,
+        "nose/nose-volume-decr": 0.08
+      },
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    },
+    {
+      "id": "woman-04",
+      "gender": 0,
+      "age": 0.38,
+      "weight": 0.555,
+      "muscle": 0.3,
+      "proportions": 0.52,
+      "race": {
+        "african": 0.15,
+        "asian": 0.15,
+        "caucasian": 0.7
+      },
+      "skin": "#c59b7a",
+      "hair": "ponytail01",
+      "hair_color": "#3d2720",
+      "shirt": "#535773",
+      "details": {
+        "nose/nose-scale-horiz-decr": 0.235,
+        "head/head-round": 0.185,
+        "chin/chin-bones-decr": 0.58,
+        "chin/chin-width-decr": 0.38,
+        "chin/chin-prominent-decr": 0.22,
+        "chin/chin-height-decr": 0.14,
+        "neck/neck-scale-horiz-decr": 0.28,
+        "neck/neck-scale-depth-decr": 0.12,
+        "cheek/l-cheek-volume-incr": 0.2,
+        "cheek/r-cheek-volume-incr": 0.2,
+        "cheek/l-cheek-bones-incr": 0.12,
+        "cheek/r-cheek-bones-incr": 0.12,
+        "eyebrows/eyebrows-angle-up": 0.12,
+        "eyebrows/eyebrows-trans-up": 0.08,
+        "nose/nose-volume-decr": 0.08
+      },
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    },
+    {
+      "id": "woman-05",
+      "gender": 0,
+      "age": 0.57,
+      "weight": 0.36,
+      "muscle": 0.335,
+      "proportions": 0.56,
+      "race": {
+        "african": 0.2,
+        "asian": 0.65,
+        "caucasian": 0.15
+      },
+      "skin": "#9d714f",
+      "hair": "short02",
+      "hair_color": "#ad8060",
+      "shirt": "#79736a",
+      "details": {
+        "nose/nose-scale-horiz-incr": 0.1,
+        "head/head-oval": 0.22,
+        "chin/chin-bones-decr": 0.58,
+        "chin/chin-width-decr": 0.38,
+        "chin/chin-prominent-decr": 0.22,
+        "chin/chin-height-decr": 0.14,
+        "neck/neck-scale-horiz-decr": 0.28,
+        "neck/neck-scale-depth-decr": 0.12,
+        "cheek/l-cheek-volume-incr": 0.2,
+        "cheek/r-cheek-volume-incr": 0.2,
+        "cheek/l-cheek-bones-incr": 0.12,
+        "cheek/r-cheek-bones-incr": 0.12,
+        "eyebrows/eyebrows-angle-up": 0.12,
+        "eyebrows/eyebrows-trans-up": 0.08,
+        "nose/nose-volume-decr": 0.08
+      },
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    },
+    {
+      "id": "woman-06",
+      "gender": 0,
+      "age": 0.72,
+      "weight": 0.425,
+      "muscle": 0.37,
+      "proportions": 0.4,
+      "race": {
+        "african": 0.05,
+        "asian": 0.9,
+        "caucasian": 0.05
+      },
+      "skin": "#dbaf8c",
+      "hair": "ponytail01",
+      "hair_color": "#65514b",
+      "shirt": "#36546b",
+      "details": {
+        "nose/nose-scale-horiz-decr": 0.145,
+        "head/head-oval": 0.08,
+        "chin/chin-bones-decr": 0.58,
+        "chin/chin-width-decr": 0.38,
+        "chin/chin-prominent-decr": 0.22,
+        "chin/chin-height-decr": 0.14,
+        "neck/neck-scale-horiz-decr": 0.28,
+        "neck/neck-scale-depth-decr": 0.12,
+        "cheek/l-cheek-volume-incr": 0.2,
+        "cheek/r-cheek-volume-incr": 0.2,
+        "cheek/l-cheek-bones-incr": 0.12,
+        "cheek/r-cheek-bones-incr": 0.12,
+        "eyebrows/eyebrows-angle-up": 0.12,
+        "eyebrows/eyebrows-trans-up": 0.08,
+        "nose/nose-volume-decr": 0.08
+      },
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    },
+    {
+      "id": "woman-07",
+      "gender": 0,
+      "age": 0.49,
+      "weight": 0.49,
+      "muscle": 0.3,
+      "proportions": 0.44,
+      "race": {
+        "african": 0.2,
+        "asian": 0.7,
+        "caucasian": 0.1
+      },
+      "skin": "#bb8b62",
+      "hair": "ponytail01",
+      "hair_color": "#857d72",
+      "shirt": "#4e6b60",
+      "details": {
+        "nose/nose-scale-horiz-incr": 0.19,
+        "head/head-round": 0.115,
+        "chin/chin-bones-decr": 0.58,
+        "chin/chin-width-decr": 0.38,
+        "chin/chin-prominent-decr": 0.22,
+        "chin/chin-height-decr": 0.14,
+        "neck/neck-scale-horiz-decr": 0.28,
+        "neck/neck-scale-depth-decr": 0.12,
+        "cheek/l-cheek-volume-incr": 0.2,
+        "cheek/r-cheek-volume-incr": 0.2,
+        "cheek/l-cheek-bones-incr": 0.12,
+        "cheek/r-cheek-bones-incr": 0.12,
+        "eyebrows/eyebrows-angle-up": 0.12,
+        "eyebrows/eyebrows-trans-up": 0.08,
+        "nose/nose-volume-decr": 0.08
+      },
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    },
+    {
+      "id": "woman-08",
+      "gender": 0,
+      "age": 0.6,
+      "weight": 0.555,
+      "muscle": 0.335,
+      "proportions": 0.48,
+      "race": {
+        "african": 0.03,
+        "asian": 0.07,
+        "caucasian": 0.9
+      },
+      "skin": "#e6c0a4",
+      "hair": "ponytail01",
+      "hair_color": "#211a16",
+      "shirt": "#7c5650",
+      "details": {
+        "nose/nose-scale-horiz-decr": 0.235,
+        "head/head-oval": 0.15,
+        "chin/chin-bones-decr": 0.58,
+        "chin/chin-width-decr": 0.38,
+        "chin/chin-prominent-decr": 0.22,
+        "chin/chin-height-decr": 0.14,
+        "neck/neck-scale-horiz-decr": 0.28,
+        "neck/neck-scale-depth-decr": 0.12,
+        "cheek/l-cheek-volume-incr": 0.2,
+        "cheek/r-cheek-volume-incr": 0.2,
+        "cheek/l-cheek-bones-incr": 0.12,
+        "cheek/r-cheek-bones-incr": 0.12,
+        "eyebrows/eyebrows-angle-up": 0.12,
+        "eyebrows/eyebrows-trans-up": 0.08,
+        "nose/nose-volume-decr": 0.08
+      },
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    },
+    {
+      "id": "woman-09",
+      "gender": 0,
+      "age": 0.4,
+      "weight": 0.36,
+      "muscle": 0.37,
+      "proportions": 0.52,
+      "race": {
+        "african": 0.35,
+        "asian": 0.15,
+        "caucasian": 0.5
+      },
+      "skin": "#b58566",
+      "hair": "afro01",
+      "hair_color": "#30211b",
+      "shirt": "#535773",
+      "details": {
+        "nose/nose-scale-horiz-incr": 0.1,
+        "head/head-oval": 0.185,
+        "chin/chin-bones-decr": 0.58,
+        "chin/chin-width-decr": 0.38,
+        "chin/chin-prominent-decr": 0.22,
+        "chin/chin-height-decr": 0.14,
+        "neck/neck-scale-horiz-decr": 0.28,
+        "neck/neck-scale-depth-decr": 0.12,
+        "cheek/l-cheek-volume-incr": 0.2,
+        "cheek/r-cheek-volume-incr": 0.2,
+        "cheek/l-cheek-bones-incr": 0.12,
+        "cheek/r-cheek-bones-incr": 0.12,
+        "eyebrows/eyebrows-angle-up": 0.12,
+        "eyebrows/eyebrows-trans-up": 0.08,
+        "nose/nose-volume-decr": 0.08
+      },
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    },
+    {
+      "id": "woman-10",
+      "gender": 0,
+      "age": 0.55,
+      "weight": 0.425,
+      "muscle": 0.3,
+      "proportions": 0.56,
+      "race": {
+        "african": 0.45,
+        "asian": 0.35,
+        "caucasian": 0.2
+      },
+      "skin": "#a4714f",
+      "hair": "ponytail01",
+      "hair_color": "#503426",
+      "shirt": "#79736a",
+      "details": {
+        "nose/nose-scale-horiz-decr": 0.145,
+        "head/head-round": 0.22,
+        "chin/chin-bones-decr": 0.58,
+        "chin/chin-width-decr": 0.38,
+        "chin/chin-prominent-decr": 0.22,
+        "chin/chin-height-decr": 0.14,
+        "neck/neck-scale-horiz-decr": 0.28,
+        "neck/neck-scale-depth-decr": 0.12,
+        "cheek/l-cheek-volume-incr": 0.2,
+        "cheek/r-cheek-volume-incr": 0.2,
+        "cheek/l-cheek-bones-incr": 0.12,
+        "cheek/r-cheek-bones-incr": 0.12,
+        "eyebrows/eyebrows-angle-up": 0.12,
+        "eyebrows/eyebrows-trans-up": 0.08,
+        "nose/nose-volume-decr": 0.08
+      },
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    },
+    {
+      "id": "neutral-01",
+      "group": "neutral",
+      "gender": 0.5,
+      "age": 0.42,
+      "weight": 0.37,
+      "muscle": 0.36,
+      "proportions": 0.39,
+      "race": {
+        "african": 0.8,
+        "asian": 0.08,
+        "caucasian": 0.12
+      },
+      "skin": "#75472f",
+      "hair": "afro01",
+      "hair_color": "#17191c",
+      "shirt": "#456573",
+      "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+      "details": {
+        "head/head-round": 0.1,
+        "nose/nose-scale-horiz-incr": 0.09,
+        "chin/chin-bones-decr": 0.12,
+        "neck/neck-scale-horiz-decr": 0.1
+      }
+    },
+    {
+      "id": "neutral-02",
+      "group": "neutral",
+      "gender": 0.5,
+      "age": 0.58,
+      "weight": 0.425,
+      "muscle": 0.405,
+      "proportions": 0.435,
+      "race": {
+        "african": 0.6,
+        "asian": 0.2,
+        "caucasian": 0.2
+      },
+      "skin": "#945f40",
+      "hair": "short01",
+      "hair_color": "#573b2b",
+      "shirt": "#796655",
+      "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+      "details": {
+        "head/head-oval": 0.13,
+        "nose/nose-scale-horiz-decr": 0.13,
+        "chin/chin-bones-decr": 0.16,
+        "neck/neck-scale-horiz-decr": 0.1
+      }
+    },
+    {
+      "id": "neutral-03",
+      "group": "neutral",
+      "gender": 0.5,
+      "age": 0.48,
+      "weight": 0.48,
+      "muscle": 0.45,
+      "proportions": 0.48,
+      "race": {
+        "african": 0.25,
+        "asian": 0.15,
+        "caucasian": 0.6
+      },
+      "skin": "#bc8968",
+      "hair": "bald",
+      "hair_color": "#6f655e",
+      "shirt": "#66627f",
+      "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+      "details": {
+        "head/head-oval": 0.16,
+        "nose/nose-scale-horiz-incr": 0.17,
+        "chin/chin-bones-decr": 0.2,
+        "neck/neck-scale-horiz-decr": 0.1
+      }
+    },
+    {
+      "id": "neutral-04",
+      "group": "neutral",
+      "gender": 0.5,
+      "age": 0.66,
+      "weight": 0.535,
+      "muscle": 0.36,
+      "proportions": 0.525,
+      "race": {
+        "african": 0.2,
+        "asian": 0.25,
+        "caucasian": 0.55
+      },
+      "skin": "#c19a7b",
+      "hair": "ponytail01",
+      "hair_color": "#27201c",
+      "shirt": "#49746a",
+      "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+      "details": {
+        "head/head-round": 0.19,
+        "nose/nose-scale-horiz-decr": 0.21,
+        "chin/chin-bones-decr": 0.12,
+        "neck/neck-scale-horiz-decr": 0.1
+      }
+    },
+    {
+      "id": "neutral-05",
+      "group": "neutral",
+      "gender": 0.5,
+      "age": 0.4,
+      "weight": 0.37,
+      "muscle": 0.405,
+      "proportions": 0.57,
+      "race": {
+        "african": 0.15,
+        "asian": 0.7,
+        "caucasian": 0.15
+      },
+      "skin": "#a87954",
+      "hair": "short02",
+      "hair_color": "#3f2920",
+      "shirt": "#855f67",
+      "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+      "details": {
+        "head/head-oval": 0.1,
+        "nose/nose-scale-horiz-incr": 0.09,
+        "chin/chin-bones-decr": 0.16,
+        "neck/neck-scale-horiz-decr": 0.1
+      }
+    },
+    {
+      "id": "neutral-06",
+      "group": "neutral",
+      "gender": 0.5,
+      "age": 0.54,
+      "weight": 0.425,
+      "muscle": 0.45,
+      "proportions": 0.39,
+      "race": {
+        "african": 0.05,
+        "asian": 0.88,
+        "caucasian": 0.07
+      },
+      "skin": "#d8aa87",
+      "hair": "short01",
+      "hair_color": "#2c2020",
+      "shirt": "#456573",
+      "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+      "details": {
+        "head/head-oval": 0.13,
+        "nose/nose-scale-horiz-decr": 0.13,
+        "chin/chin-bones-decr": 0.2,
+        "neck/neck-scale-horiz-decr": 0.1
+      }
+    },
+    {
+      "id": "neutral-07",
+      "group": "neutral",
+      "gender": 0.5,
+      "age": 0.7,
+      "weight": 0.48,
+      "muscle": 0.36,
+      "proportions": 0.435,
+      "race": {
+        "african": 0.25,
+        "asian": 0.65,
+        "caucasian": 0.1
+      },
+      "skin": "#bb875f",
+      "hair": "ponytail01",
+      "hair_color": "#a18a72",
+      "shirt": "#796655",
+      "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+      "details": {
+        "head/head-round": 0.16,
+        "nose/nose-scale-horiz-incr": 0.17,
+        "chin/chin-bones-decr": 0.12,
+        "neck/neck-scale-horiz-decr": 0.1
+      }
+    },
+    {
+      "id": "neutral-08",
+      "group": "neutral",
+      "gender": 0.5,
+      "age": 0.46,
+      "weight": 0.535,
+      "muscle": 0.405,
+      "proportions": 0.48,
+      "race": {
+        "african": 0.04,
+        "asian": 0.06,
+        "caucasian": 0.9
+      },
+      "skin": "#e3b99f",
+      "hair": "bald",
+      "hair_color": "#978b7f",
+      "shirt": "#66627f",
+      "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+      "details": {
+        "head/head-oval": 0.19,
+        "nose/nose-scale-horiz-decr": 0.21,
+        "chin/chin-bones-decr": 0.16,
+        "neck/neck-scale-horiz-decr": 0.1
+      }
+    },
+    {
+      "id": "neutral-09",
+      "group": "neutral",
+      "gender": 0.5,
+      "age": 0.61,
+      "weight": 0.37,
+      "muscle": 0.45,
+      "proportions": 0.525,
+      "race": {
+        "african": 0.35,
+        "asian": 0.2,
+        "caucasian": 0.45
+      },
+      "skin": "#b48164",
+      "hair": "afro01",
+      "hair_color": "#392720",
+      "shirt": "#49746a",
+      "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+      "details": {
+        "head/head-oval": 0.1,
+        "nose/nose-scale-horiz-incr": 0.09,
+        "chin/chin-bones-decr": 0.2,
+        "neck/neck-scale-horiz-decr": 0.1
+      }
+    },
+    {
+      "id": "neutral-10",
+      "group": "neutral",
+      "gender": 0.5,
+      "age": 0.5,
+      "weight": 0.425,
+      "muscle": 0.36,
+      "proportions": 0.57,
+      "race": {
+        "african": 0.45,
+        "asian": 0.4,
+        "caucasian": 0.15
+      },
+      "skin": "#9e7050",
+      "hair": "short02",
+      "hair_color": "#9c6c48",
+      "shirt": "#855f67",
+      "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
+      "details": {
+        "head/head-round": 0.13,
+        "nose/nose-scale-horiz-decr": 0.13,
+        "chin/chin-bones-decr": 0.12,
+        "neck/neck-scale-horiz-decr": 0.1
+      }
+    }
+  ]
+}
