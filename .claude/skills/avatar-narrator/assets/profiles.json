@@ -17,7 +17,7 @@
       "skin": "#67422f",
       "hair": "short01",
       "hair_color": "#211a16",
-      "outfit": "shirt",
+      "outfit": "fisherman-sweater",
       "details": {
         "nose/nose-scale-horiz-incr": 0.1,
         "head/head-round": 0.08
@@ -39,7 +39,7 @@
       "skin": "#875239",
       "hair": "afro01",
       "hair_color": "#30211b",
-      "outfit": "polo",
+      "outfit": "men-double-breasted-suit",
       "details": {
         "nose/nose-scale-horiz-decr": 0.145,
         "head/head-oval": 0.115
@@ -61,7 +61,7 @@
       "skin": "#c3916b",
       "hair": "bald",
       "hair_color": "#503426",
-      "outfit": "shirt",
+      "outfit": "shirt-and-tie",
       "details": {
         "nose/nose-scale-horiz-incr": 0.19,
         "head/head-oval": 0.15
@@ -105,7 +105,7 @@
       "skin": "#9d714f",
       "hair": "short01",
       "hair_color": "#221a18",
-      "outfit": "shirt",
+      "outfit": "men-suit-and-tie",
       "details": {
         "nose/nose-scale-horiz-incr": 0.1,
         "head/head-oval": 0.22
@@ -127,7 +127,7 @@
       "skin": "#ae7855",
       "hair": "short02",
       "hair_color": "#151719",
-      "outfit": "polo",
+      "outfit": "knit-sweater-01",
       "details": {
         "nose/nose-scale-horiz-decr": 0.145,
         "head/head-oval": 0.08
@@ -137,7 +137,7 @@
       "id": "man-07",
       "name": "Álvaro",
       "gender": 1,
-      "age": 0.57,
+      "age": 0.6469230769,
       "weight": 0.49,
       "muscle": 0.39,
       "proportions": 0.44,
@@ -171,7 +171,7 @@
       "skin": "#bb8268",
       "hair": "short01",
       "hair_color": "#ad8060",
-      "outfit": "polo",
+      "outfit": "shirt",
       "details": {
         "nose/nose-scale-horiz-decr": 0.235,
         "head/head-oval": 0.15
@@ -193,7 +193,7 @@
       "skin": "#b58566",
       "hair": "afro01",
       "hair_color": "#65514b",
-      "outfit": "shirt",
+      "outfit": "men-suit-3",
       "details": {
         "nose/nose-scale-horiz-incr": 0.1,
         "head/head-oval": 0.185
@@ -215,7 +215,7 @@
       "skin": "#a4714f",
       "hair": "bald",
       "hair_color": "#857d72",
-      "outfit": "polo",
+      "outfit": "knit-sweater-02",
       "details": {
         "nose/nose-scale-horiz-decr": 0.145,
         "head/head-round": 0.22
@@ -237,7 +237,7 @@
       "skin": "#67422f",
       "hair": "afro01",
       "hair_color": "#2b211c",
-      "outfit": "t-shirt",
+      "outfit": "women-double-breasted-suit",
       "details": {
         "nose/nose-scale-horiz-incr": 0.1,
         "head/head-round": 0.08,
@@ -273,7 +273,7 @@
       "skin": "#875239",
       "hair": "bob_blunt",
       "hair_color": "#221a18",
-      "outfit": "blouse",
+      "outfit": "peasant-blouse",
       "details": {
         "nose/nose-scale-horiz-decr": 0.145,
         "head/head-oval": 0.115,
@@ -309,7 +309,7 @@
       "skin": "#c3916b",
       "hair": "rev_fr_braidbun1",
       "hair_color": "#151719",
-      "outfit": "t-shirt",
+      "outfit": "asymmetric-tunic",
       "details": {
         "nose/nose-scale-horiz-incr": 0.19,
         "head/head-oval": 0.15,
@@ -345,7 +345,7 @@
       "skin": "#a97b61",
       "hair": "bob_blunt",
       "hair_color": "#3d2720",
-      "outfit": "blouse",
+      "outfit": "women-suit",
       "details": {
         "nose/nose-scale-horiz-decr": 0.235,
         "head/head-round": 0.185,
@@ -381,7 +381,7 @@
       "skin": "#9d714f",
       "hair": "short02",
       "hair_color": "#ad8060",
-      "outfit": "t-shirt",
+      "outfit": "disco-top",
       "details": {
         "nose/nose-scale-horiz-incr": 0.1,
         "head/head-oval": 0.22,
@@ -417,7 +417,7 @@
       "skin": "#b28362",
       "hair": "bob_blunt",
       "hair_color": "#65514b",
-      "outfit": "blouse",
+      "outfit": "fisherman-sweater",
       "details": {
         "nose/nose-scale-horiz-decr": 0.145,
         "head/head-oval": 0.08,
@@ -441,7 +441,7 @@
       "id": "woman-07",
       "name": "Alice",
       "gender": 0,
-      "age": 0.49,
+      "age": 0.5732307692,
       "weight": 0.49,
       "muscle": 0.3,
       "proportions": 0.44,
@@ -453,7 +453,7 @@
       "skin": "#bb8b62",
       "hair": "bob_blunt",
       "hair_color": "#857d72",
-      "outfit": "t-shirt",
+      "outfit": "sleeveless-shirt",
       "details": {
         "nose/nose-scale-horiz-incr": 0.19,
         "head/head-round": 0.115,
@@ -471,7 +471,10 @@
         "eyebrows/eyebrows-trans-up": 0.08,
         "nose/nose-volume-decr": 0.08
       },
-      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed",
+      "alternate_outfits": [
+        "joepal-t-shirt"
+      ]
     },
     {
       "id": "woman-08",
@@ -489,7 +492,7 @@
       "skin": "#ad765d",
       "hair": "afro01",
       "hair_color": "#211a16",
-      "outfit": "blouse",
+      "outfit": "knit-sweater-01",
       "details": {
         "nose/nose-scale-horiz-decr": 0.235,
         "head/head-oval": 0.15,
@@ -543,7 +546,8 @@
         "eyebrows/eyebrows-trans-up": 0.08,
         "nose/nose-volume-decr": 0.08
       },
-      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+      "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed",
+      "outfit_color": "#418652"
     },
     {
       "id": "woman-10",
@@ -561,7 +565,7 @@
       "skin": "#a4714f",
       "hair": "bob_blunt",
       "hair_color": "#503426",
-      "outfit": "blouse",
+      "outfit": "knit-sweater-02",
       "details": {
         "nose/nose-scale-horiz-decr": 0.145,
         "head/head-round": 0.22,
@@ -598,7 +602,7 @@
       "skin": "#75472f",
       "hair": "afro01",
       "hair_color": "#17191c",
-      "outfit": "polo",
+      "outfit": "t-shirt",
       "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
       "details": {
         "head/head-round": 0.1,
@@ -624,7 +628,7 @@
       "skin": "#945f40",
       "hair": "short01",
       "hair_color": "#573b2b",
-      "outfit": "shirt",
+      "outfit": "polo",
       "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
       "details": {
         "head/head-oval": 0.13,
@@ -650,7 +654,7 @@
       "skin": "#bc8968",
       "hair": "bald",
       "hair_color": "#6f655e",
-      "outfit": "blouse",
+      "outfit": "knit-sweater-01",
       "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
       "details": {
         "head/head-oval": 0.16,
@@ -683,7 +687,8 @@
         "nose/nose-scale-horiz-decr": 0.21,
         "chin/chin-bones-decr": 0.12,
         "neck/neck-scale-horiz-decr": 0.1
-      }
+      },
+      "outfit_color": "#79bfea"
     },
     {
       "id": "neutral-05",
@@ -702,7 +707,7 @@
       "skin": "#a87954",
       "hair": "short02",
       "hair_color": "#3f2920",
-      "outfit": "polo",
+      "outfit": "knit-sweater-02",
       "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
       "details": {
         "head/head-oval": 0.1,
@@ -728,7 +733,7 @@
       "skin": "#a36c50",
       "hair": "short01",
       "hair_color": "#2c2020",
-      "outfit": "shirt",
+      "outfit": "t-shirt",
       "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
       "details": {
         "head/head-oval": 0.13,
@@ -742,7 +747,7 @@
       "name": "Charlie",
       "group": "neutral",
       "gender": 0.5,
-      "age": 0.7,
+      "age": 0.7769230769,
       "weight": 0.48,
       "muscle": 0.36,
       "proportions": 0.435,
@@ -754,7 +759,7 @@
       "skin": "#bb875f",
       "hair": "ponytail01",
       "hair_color": "#a18a72",
-      "outfit": "blouse",
+      "outfit": "polo-gray",
       "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
       "details": {
         "head/head-round": 0.16,
@@ -780,7 +785,7 @@
       "skin": "#b58265",
       "hair": "short01",
       "hair_color": "#978b7f",
-      "outfit": "t-shirt",
+      "outfit": "fisherman-sweater",
       "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
       "details": {
         "head/head-oval": 0.19,
@@ -806,7 +811,7 @@
       "skin": "#b48164",
       "hair": "afro01",
       "hair_color": "#392720",
-      "outfit": "polo",
+      "outfit": "t-shirt",
       "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
       "details": {
         "head/head-oval": 0.1,
@@ -832,14 +837,15 @@
       "skin": "#9e7050",
       "hair": "short02",
       "hair_color": "#9c6c48",
-      "outfit": "shirt",
+      "outfit": "t-shirt",
       "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
       "details": {
         "head/head-round": 0.13,
         "nose/nose-scale-horiz-decr": 0.13,
         "chin/chin-bones-decr": 0.12,
         "neck/neck-scale-horiz-decr": 0.1
-      }
+      },
+      "outfit_color": "#414141"
     }
   ]
 }

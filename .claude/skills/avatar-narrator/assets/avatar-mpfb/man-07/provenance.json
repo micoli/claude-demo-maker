@@ -1,8 +1,9 @@
 {
   "profile": {
     "id": "man-07",
+    "name": "Álvaro",
     "gender": 1,
-    "age": 0.57,
+    "age": 0.6469230769,
     "weight": 0.49,
     "muscle": 0.39,
     "proportions": 0.44,
@@ -14,11 +15,18 @@
     "skin": "#bb8b62",
     "hair": "short02",
     "hair_color": "#3d2720",
-    "shirt": "#4e6b60",
+    "outfit": "shirt",
     "details": {
       "nose/nose-scale-horiz-incr": 0.19,
       "head/head-round": 0.115
     }
+  },
+  "outfit": {
+    "id": "shirt",
+    "file": "shirt/male_casualsuit03.mhclo",
+    "author": "MakeHuman Team",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+    "license": "CC0-1.0"
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -36,7 +44,7 @@
   "visual_approval": "pending",
   "macro": {
     "gender": 1,
-    "age": 0.57,
+    "age": 0.6469230769,
     "muscle": 0.39,
     "weight": 0.49,
     "proportions": 0.44,
@@ -121,5 +129,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 20692
+  "triangles": 21064
 }

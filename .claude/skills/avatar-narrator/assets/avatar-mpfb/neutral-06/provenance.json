@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "neutral-06",
+    "name": "\u00c1lex",
     "group": "neutral",
     "gender": 0.5,
     "age": 0.54,
@@ -15,7 +16,7 @@
     "skin": "#a36c50",
     "hair": "short01",
     "hair_color": "#2c2020",
-    "shirt": "#456573",
+    "outfit": "t-shirt",
     "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
     "details": {
       "head/head-oval": 0.13,
@@ -23,6 +24,13 @@
       "chin/chin-bones-decr": 0.2,
       "neck/neck-scale-horiz-decr": 0.1
     }
+  },
+  "outfit": {
+    "id": "t-shirt",
+    "file": "t-shirt/t_shirt_basic_tucked.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -125,5 +133,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 21162
+  "triangles": 21334
 }

@@ -84,4 +84,4 @@ Les 30 prénoms figurent dans le [catalogue des avatars](.claude/skills/avatar-n
 
 Tu peux également commencer la demande par `/avatar-narrator` pour choisir explicitement la skill. Les paramètres des scripts, les exemples de configuration et la procédure de reconstruction de la banque d’avatars sont détaillés dans le [SKILL.md](.claude/skills/avatar-narrator/SKILL.md).
 
-![avatars.jpg](avatars.jpg)
+![avatars.png](avatars.png)

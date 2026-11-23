@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "woman-09",
+    "name": "Abril",
     "gender": 0,
     "age": 0.4,
     "weight": 0.36,
@@ -14,7 +15,7 @@
     "skin": "#b58566",
     "hair": "afro01",
     "hair_color": "#30211b",
-    "shirt": "#535773",
+    "outfit": "t-shirt",
     "details": {
       "nose/nose-scale-horiz-incr": 0.1,
       "head/head-oval": 0.185,
@@ -32,7 +33,15 @@
       "eyebrows/eyebrows-trans-up": 0.08,
       "nose/nose-volume-decr": 0.08
     },
-    "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed",
+    "outfit_color": "#418652"
+  },
+  "outfit": {
+    "id": "t-shirt",
+    "file": "t-shirt/t_shirt_basic_tucked.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -135,5 +144,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 19760
+  "triangles": 19892
 }

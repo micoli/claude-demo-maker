@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "man-08",
+    "name": "Hugo",
     "gender": 1,
     "age": 0.72,
     "weight": 0.555,
@@ -14,21 +15,28 @@
     "skin": "#bb8268",
     "hair": "short01",
     "hair_color": "#ad8060",
-    "shirt": "#7c5650",
+    "outfit": "shirt",
     "details": {
       "nose/nose-scale-horiz-decr": 0.235,
       "head/head-oval": 0.15
     }
   },
+  "outfit": {
+    "id": "shirt",
+    "file": "shirt/male_casualsuit03.mhclo",
+    "author": "MakeHuman Team",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html",
+    "license": "CC0-1.0"
+  },
   "hair_eye_clearance": {
     "protected": true,
     "trimmed_faces": 0,
+    "passed": true,
     "checked_angles_degrees": [
       -30,
       0,
       30
-    ],
-    "passed": true
+    ]
   },
   "generator": "mpfb",
   "version": "2.0.18",
@@ -121,5 +129,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 21078
+  "triangles": 21412
 }

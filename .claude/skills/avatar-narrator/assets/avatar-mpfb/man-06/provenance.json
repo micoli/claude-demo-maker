@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "man-06",
+    "name": "Alejandro",
     "gender": 1,
     "age": 0.38,
     "weight": 0.425,
@@ -14,21 +15,28 @@
     "skin": "#ae7855",
     "hair": "short02",
     "hair_color": "#151719",
-    "shirt": "#36546b",
+    "outfit": "knit-sweater-01",
     "details": {
       "nose/nose-scale-horiz-decr": 0.145,
       "head/head-oval": 0.08
     }
   },
+  "outfit": {
+    "id": "knit-sweater-01",
+    "file": "knit-sweater-01/mindfront_knitted_sweater_01.mhclo",
+    "author": "Mindfront",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts02.html",
+    "license": "CC-BY-4.0"
+  },
   "hair_eye_clearance": {
     "protected": true,
     "trimmed_faces": 17,
+    "passed": true,
     "checked_angles_degrees": [
       -30,
       0,
       30
-    ],
-    "passed": true
+    ]
   },
   "generator": "mpfb",
   "version": "2.0.18",
@@ -121,5 +129,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 20838
+  "triangles": 20718
 }

@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "woman-10",
+    "name": "Charlotte",
     "gender": 0,
     "age": 0.55,
     "weight": 0.425,
@@ -14,7 +15,7 @@
     "skin": "#a4714f",
     "hair": "bob_blunt",
     "hair_color": "#503426",
-    "outfit": "blouse",
+    "outfit": "knit-sweater-02",
     "details": {
       "nose/nose-scale-horiz-decr": 0.145,
       "head/head-round": 0.22,
@@ -35,11 +36,11 @@
     "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
   },
   "outfit": {
-    "id": "blouse",
-    "file": "blouse/preppyblouse.mhclo",
-    "author": "reizibarrientos",
-    "source": "https://files.makehumancommunity.org/sites/default/files/clothes/1601/2039487116/preppyblouse.mhclo",
-    "license": "CC0-1.0"
+    "id": "knit-sweater-02",
+    "file": "knit-sweater-02/mindfront_knitted_sweater_02.mhclo",
+    "author": "Mindfront",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts02.html",
+    "license": "CC-BY-4.0"
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -144,5 +145,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 19986
+  "triangles": 20104
 }

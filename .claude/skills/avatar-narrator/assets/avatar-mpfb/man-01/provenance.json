@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "man-01",
+    "name": "Alain",
     "gender": 1,
     "age": 0.4,
     "weight": 0.36,
@@ -14,21 +15,28 @@
     "skin": "#67422f",
     "hair": "short01",
     "hair_color": "#211a16",
-    "shirt": "#36546b",
+    "outfit": "fisherman-sweater",
     "details": {
       "nose/nose-scale-horiz-incr": 0.1,
       "head/head-round": 0.08
     }
   },
+  "outfit": {
+    "id": "fisherman-sweater",
+    "file": "fisherman-sweater/toigo_fisherman_sweater.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
+  },
   "hair_eye_clearance": {
     "protected": true,
     "trimmed_faces": 0,
+    "passed": true,
     "checked_angles_degrees": [
       -30,
       0,
       30
-    ],
-    "passed": true
+    ]
   },
   "generator": "mpfb",
   "version": "2.0.18",
@@ -121,5 +129,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 21070
+  "triangles": 21098
 }

@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "man-09",
+    "name": "Arthur",
     "gender": 1,
     "age": 0.49,
     "weight": 0.36,
@@ -14,21 +15,28 @@
     "skin": "#b58566",
     "hair": "afro01",
     "hair_color": "#65514b",
-    "shirt": "#535773",
+    "outfit": "men-suit-3",
     "details": {
       "nose/nose-scale-horiz-incr": 0.1,
       "head/head-oval": 0.185
     }
   },
+  "outfit": {
+    "id": "men-suit-3",
+    "file": "men-suit-3/toigo_male_suit_3.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/suits01.html",
+    "license": "CC0-1.0"
+  },
   "hair_eye_clearance": {
     "protected": true,
     "trimmed_faces": 2,
+    "passed": true,
     "checked_angles_degrees": [
       -30,
       0,
       30
-    ],
-    "passed": true
+    ]
   },
   "generator": "mpfb",
   "version": "2.0.18",
@@ -121,5 +129,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 19524
+  "triangles": 21632
 }

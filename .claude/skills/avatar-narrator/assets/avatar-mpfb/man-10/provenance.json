@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "man-10",
+    "name": "\u00c9ric",
     "gender": 1,
     "age": 0.6,
     "weight": 0.425,
@@ -14,21 +15,28 @@
     "skin": "#a4714f",
     "hair": "bald",
     "hair_color": "#857d72",
-    "shirt": "#79736a",
+    "outfit": "knit-sweater-02",
     "details": {
       "nose/nose-scale-horiz-decr": 0.145,
       "head/head-round": 0.22
     }
   },
+  "outfit": {
+    "id": "knit-sweater-02",
+    "file": "knit-sweater-02/mindfront_knitted_sweater_02.mhclo",
+    "author": "Mindfront",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts02.html",
+    "license": "CC-BY-4.0"
+  },
   "hair_eye_clearance": {
     "protected": true,
     "trimmed_faces": 0,
+    "passed": true,
     "checked_angles_degrees": [
       -30,
       0,
       30
-    ],
-    "passed": true
+    ]
   },
   "generator": "mpfb",
   "version": "2.0.18",
@@ -116,5 +124,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 17368
+  "triangles": 17228
 }

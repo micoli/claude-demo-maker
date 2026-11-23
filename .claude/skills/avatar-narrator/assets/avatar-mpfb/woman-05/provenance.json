@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "woman-05",
+    "name": "Alba",
     "gender": 0,
     "age": 0.57,
     "weight": 0.36,
@@ -14,7 +15,7 @@
     "skin": "#9d714f",
     "hair": "short02",
     "hair_color": "#ad8060",
-    "shirt": "#79736a",
+    "outfit": "disco-top",
     "details": {
       "nose/nose-scale-horiz-incr": 0.1,
       "head/head-oval": 0.22,
@@ -33,6 +34,13 @@
       "nose/nose-volume-decr": 0.08
     },
     "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+  },
+  "outfit": {
+    "id": "disco-top",
+    "file": "disco-top/elvs_disco_top2.mhclo",
+    "author": "Elvaerwyn",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts03.html",
+    "license": "CC-BY"
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -135,5 +143,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 20852
+  "triangles": 21488
 }

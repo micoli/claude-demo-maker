@@ -1,9 +1,10 @@
 {
   "profile": {
     "id": "neutral-07",
+    "name": "Charlie",
     "group": "neutral",
     "gender": 0.5,
-    "age": 0.7,
+    "age": 0.7769230769,
     "weight": 0.48,
     "muscle": 0.36,
     "proportions": 0.435,
@@ -15,7 +16,7 @@
     "skin": "#bb875f",
     "hair": "ponytail01",
     "hair_color": "#a18a72",
-    "shirt": "#796655",
+    "outfit": "polo-gray",
     "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
     "details": {
       "head/head-round": 0.16,
@@ -23,6 +24,15 @@
       "chin/chin-bones-decr": 0.12,
       "neck/neck-scale-horiz-decr": 0.1
     }
+  },
+  "outfit": {
+    "id": "polo-gray",
+    "file": "polo-gray/Polo_t-shirt.mhclo",
+    "author": "namuhekam",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0",
+    "modifications": "Grayscale base-color texture",
+    "surface_clearance": 0.01
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -40,7 +50,7 @@
   "visual_approval": "pending",
   "macro": {
     "gender": 0.5,
-    "age": 0.7,
+    "age": 0.7769230769,
     "muscle": 0.36,
     "weight": 0.48,
     "proportions": 0.435,
@@ -125,5 +135,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 22834
+  "triangles": 23090
 }

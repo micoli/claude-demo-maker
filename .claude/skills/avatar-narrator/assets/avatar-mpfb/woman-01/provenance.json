@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "woman-01",
+    "name": "Aurore",
     "gender": 0,
     "age": 0.46,
     "weight": 0.36,
@@ -14,7 +15,7 @@
     "skin": "#67422f",
     "hair": "afro01",
     "hair_color": "#2b211c",
-    "shirt": "#36546b",
+    "outfit": "women-double-breasted-suit",
     "details": {
       "nose/nose-scale-horiz-incr": 0.1,
       "head/head-round": 0.08,
@@ -33,6 +34,13 @@
       "nose/nose-volume-decr": 0.08
     },
     "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+  },
+  "outfit": {
+    "id": "women-double-breasted-suit",
+    "file": "women-double-breasted-suit/toigo_female_double-breasted_suit.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/suits01.html",
+    "license": "CC0-1.0"
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -135,5 +143,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 19652
+  "triangles": 21506
 }

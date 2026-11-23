@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "neutral-03",
+    "name": "Fiore",
     "group": "neutral",
     "gender": 0.5,
     "age": 0.48,
@@ -15,7 +16,7 @@
     "skin": "#bc8968",
     "hair": "bald",
     "hair_color": "#6f655e",
-    "shirt": "#66627f",
+    "outfit": "knit-sweater-01",
     "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
     "details": {
       "head/head-oval": 0.16,
@@ -23,6 +24,13 @@
       "chin/chin-bones-decr": 0.2,
       "neck/neck-scale-horiz-decr": 0.1
     }
+  },
+  "outfit": {
+    "id": "knit-sweater-01",
+    "file": "knit-sweater-01/mindfront_knitted_sweater_01.mhclo",
+    "author": "Mindfront",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts02.html",
+    "license": "CC-BY-4.0"
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -120,5 +128,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 17408
+  "triangles": 17360
 }

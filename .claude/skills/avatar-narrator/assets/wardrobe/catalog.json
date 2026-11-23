@@ -22,5 +22,98 @@
     "author": "MargaretToigo",
     "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
     "license": "CC0-1.0"
+  },
+  "fisherman-sweater": {
+    "file": "fisherman-sweater/toigo_fisherman_sweater.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
+  },
+  "shirt-and-tie": {
+    "file": "shirt-and-tie/elvs_male_shirt_tie_tucked1.mhclo",
+    "author": "Elvaerwyn",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts02.html",
+    "license": "CC-BY"
+  },
+  "knit-sweater-01": {
+    "file": "knit-sweater-01/mindfront_knitted_sweater_01.mhclo",
+    "author": "Mindfront",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts02.html",
+    "license": "CC-BY-4.0"
+  },
+  "knit-sweater-02": {
+    "file": "knit-sweater-02/mindfront_knitted_sweater_02.mhclo",
+    "author": "Mindfront",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts02.html",
+    "license": "CC-BY-4.0"
+  },
+  "asymmetric-tunic": {
+    "file": "asymmetric-tunic/drednicolson_asymmetric_tunic_and_sash.mhclo",
+    "author": "DredNicolson",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts03.html",
+    "license": "CC-BY"
+  },
+  "disco-top": {
+    "file": "disco-top/elvs_disco_top2.mhclo",
+    "author": "Elvaerwyn",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts03.html",
+    "license": "CC-BY"
+  },
+  "peasant-blouse": {
+    "file": "peasant-blouse/elvs_ruffle_sleeve_peasant_blouse_1.mhclo",
+    "author": "Elvaerwyn",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts03.html",
+    "license": "CC-BY"
+  },
+  "sleeveless-shirt": {
+    "file": "sleeveless-shirt/punkduck_sleeveless_shirt.mhclo",
+    "author": "punkduck",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts03.html",
+    "license": "CC-BY-3.0",
+    "surface_clearance": 0.012
+  },
+  "women-double-breasted-suit": {
+    "file": "women-double-breasted-suit/toigo_female_double-breasted_suit.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/suits01.html",
+    "license": "CC0-1.0"
+  },
+  "women-suit": {
+    "file": "women-suit/toigo_female_suit.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/suits01.html",
+    "license": "CC0-1.0"
+  },
+  "men-double-breasted-suit": {
+    "file": "men-double-breasted-suit/toigo_male_double-breasted_suit.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/suits01.html",
+    "license": "CC0-1.0"
+  },
+  "men-suit-and-tie": {
+    "file": "men-suit-and-tie/toigo_male_suit_tie_and_jacket.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/suits01.html",
+    "license": "CC0-1.0"
+  },
+  "men-suit-3": {
+    "file": "men-suit-3/toigo_male_suit_3.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/suits01.html",
+    "license": "CC0-1.0"
+  },
+  "polo-gray": {
+    "file": "polo-gray/Polo_t-shirt.mhclo",
+    "author": "namuhekam",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0",
+    "modifications": "Grayscale base-color texture",
+    "surface_clearance": 0.01
+  },
+  "joepal-t-shirt": {
+    "file": "joepal-t-shirt/joepal_crude_t-shirt_female.mhclo",
+    "author": "Joel Palmius",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
   }
 }

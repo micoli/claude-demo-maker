@@ -1,8 +1,9 @@
 {
   "profile": {
     "id": "woman-07",
+    "name": "Alice",
     "gender": 0,
-    "age": 0.49,
+    "age": 0.5732307692,
     "weight": 0.49,
     "muscle": 0.3,
     "proportions": 0.44,
@@ -14,7 +15,7 @@
     "skin": "#bb8b62",
     "hair": "bob_blunt",
     "hair_color": "#857d72",
-    "outfit": "t-shirt",
+    "outfit": "sleeveless-shirt",
     "details": {
       "nose/nose-scale-horiz-incr": 0.19,
       "head/head-round": 0.115,
@@ -32,14 +33,18 @@
       "eyebrows/eyebrows-trans-up": 0.08,
       "nose/nose-volume-decr": 0.08
     },
-    "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
+    "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed",
+    "alternate_outfits": [
+      "joepal-t-shirt"
+    ]
   },
   "outfit": {
-    "id": "t-shirt",
-    "file": "t-shirt/t_shirt_basic_tucked.mhclo",
-    "author": "MargaretToigo",
-    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
-    "license": "CC0-1.0"
+    "id": "sleeveless-shirt",
+    "file": "sleeveless-shirt/punkduck_sleeveless_shirt.mhclo",
+    "author": "punkduck",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts03.html",
+    "license": "CC-BY-3.0",
+    "surface_clearance": 0.012
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -57,7 +62,7 @@
   "visual_approval": "pending",
   "macro": {
     "gender": 0,
-    "age": 0.49,
+    "age": 0.5732307692,
     "muscle": 0.3,
     "weight": 0.49,
     "proportions": 0.44,
@@ -144,5 +149,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 20522
+  "triangles": 21036
 }

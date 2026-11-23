@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "neutral-01",
+    "name": "Sacha",
     "group": "neutral",
     "gender": 0.5,
     "age": 0.42,
@@ -15,7 +16,7 @@
     "skin": "#75472f",
     "hair": "afro01",
     "hair_color": "#17191c",
-    "shirt": "#456573",
+    "outfit": "t-shirt",
     "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
     "details": {
       "head/head-round": 0.1,
@@ -23,6 +24,13 @@
       "chin/chin-bones-decr": 0.12,
       "neck/neck-scale-horiz-decr": 0.1
     }
+  },
+  "outfit": {
+    "id": "t-shirt",
+    "file": "t-shirt/t_shirt_basic_tucked.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -125,5 +133,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 19652
+  "triangles": 19788
 }

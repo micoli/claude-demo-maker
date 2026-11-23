@@ -27,19 +27,35 @@ EXPRESSIONS = {'neutral': {}, 'warm': {'mouthSmileLeft': .3, 'mouthSmileRight': 
                'surprised': {'browInnerUp': .45, 'browOuterUpLeft': .4, 'browOuterUpRight': .4, 'eyeWideLeft': .3, 'eyeWideRight': .3}}
 
 
+def linear_rgba(color):
+    srgb = [int(color[i:i+2], 16) / 255 for i in (1, 3, 5)]
+    linear = [value / 12.92 if value <= .04045 else ((value + .055) / 1.055) ** 2.4 for value in srgb]
+    return (*linear, 1)
+
+
 def material(name, color):
-    rgb = [int(color[i:i+2], 16)/255 for i in (1,3,5)]
-    rgb = [c/12.92 if c <= .04045 else ((c+.055)/1.055)**2.4 for c in rgb]
+    rgba = linear_rgba(color)
     mat = bpy.data.materials.new(name)
-    mat.diffuse_color = (*rgb, 1)
+    mat.diffuse_color = rgba
     mat.use_nodes = True
     shader = next(n for n in mat.node_tree.nodes if n.type == 'BSDF_PRINCIPLED')
-    shader.inputs['Base Color'].default_value = (*rgb, 1)
+    shader.inputs['Base Color'].default_value = rgba
     shader.inputs['Roughness'].default_value = .72
     return mat
 
 
-def fit_surface_clearance(human, garment, body, bottom):
+def recolor_solid_garment(garment, color):
+    rgba = linear_rgba(color)
+    for material in garment.data.materials:
+        shader = next(node for node in material.node_tree.nodes if node.type == 'BSDF_PRINCIPLED')
+        base_color = shader.inputs['Base Color']
+        if base_color.is_linked:
+            continue
+        base_color.default_value = rgba
+        material.diffuse_color = rgba
+
+
+def fit_surface_clearance(human, garment, body, bottom, clearance=.003):
     world = human.matrix_world
     surface = BVHTree.FromPolygons(
         [world @ vertex.co for vertex in human.data.vertices],
@@ -52,8 +68,8 @@ def fit_surface_clearance(human, garment, body, bottom):
         if point.z < bottom - .04:
             continue
         nearest, normal, _, _ = surface.find_nearest(point, .03)
-        if nearest is not None and (point - nearest).dot(normal) < .003:
-            vertex.co = inverse @ (nearest + normal * .003)
+        if nearest is not None and (point - nearest).dot(normal) < clearance:
+            vertex.co = inverse @ (nearest + normal * clearance)
 
 
 def covered_torso_vertices(human, garment, body, bottom):
@@ -289,10 +305,12 @@ def main():
         garment_file = wardrobe / outfit['file']
         garment = HumanService.add_mhclo_asset(str(garment_file), human, subdiv_levels=0, set_up_rigging=False)
         garment['avatar_garment'] = outfit_id
+        if outfit_id == profile.get('outfit') and 'outfit_color' in profile:
+            recolor_solid_garment(garment, profile['outfit_color'])
         bpy.context.view_layer.update()
         delete_group = 'Delete.' + garment_file.stem.replace(' ', '_')
         covered = group_members(delete_group) if delete_group in human.vertex_groups else set()
-        fit_surface_clearance(human, garment, body, bottom)
+        fit_surface_clearance(human, garment, body, bottom, outfit.get('surface_clearance', .003))
         if not covered:
             covered = covered_torso_vertices(human, garment, body, bottom)
         assets_used=[]

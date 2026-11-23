@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "man-04",
+    "name": "Oliver",
     "gender": 1,
     "age": 0.66,
     "weight": 0.555,

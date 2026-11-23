@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "neutral-10",
+    "name": "Taylor",
     "group": "neutral",
     "gender": 0.5,
     "age": 0.5,
@@ -15,14 +16,22 @@
     "skin": "#9e7050",
     "hair": "short02",
     "hair_color": "#9c6c48",
-    "shirt": "#855f67",
+    "outfit": "t-shirt",
     "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
     "details": {
       "head/head-round": 0.13,
       "nose/nose-scale-horiz-decr": 0.13,
       "chin/chin-bones-decr": 0.12,
       "neck/neck-scale-horiz-decr": 0.1
-    }
+    },
+    "outfit_color": "#414141"
+  },
+  "outfit": {
+    "id": "t-shirt",
+    "file": "t-shirt/t_shirt_basic_tucked.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
+    "license": "CC0-1.0"
   },
   "hair_eye_clearance": {
     "protected": true,
@@ -125,5 +134,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 20728
+  "triangles": 20896
 }

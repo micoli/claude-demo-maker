@@ -1,6 +1,7 @@
 {
   "profile": {
     "id": "woman-06",
+    "name": "Sofia",
     "gender": 0,
     "age": 0.72,
     "weight": 0.425,
@@ -14,7 +15,7 @@
     "skin": "#b28362",
     "hair": "bob_blunt",
     "hair_color": "#65514b",
-    "outfit": "blouse",
+    "outfit": "fisherman-sweater",
     "details": {
       "nose/nose-scale-horiz-decr": 0.145,
       "head/head-oval": 0.08,
@@ -35,10 +36,10 @@
     "art_direction": "feminine face; tapered jaw and chin, soft cheeks, slender neck; both eyes unobstructed"
   },
   "outfit": {
-    "id": "blouse",
-    "file": "blouse/preppyblouse.mhclo",
-    "author": "reizibarrientos",
-    "source": "https://files.makehumancommunity.org/sites/default/files/clothes/1601/2039487116/preppyblouse.mhclo",
+    "id": "fisherman-sweater",
+    "file": "fisherman-sweater/toigo_fisherman_sweater.mhclo",
+    "author": "MargaretToigo",
+    "source": "https://static.makehumancommunity.org/assets/assetpacks/shirts01.html",
     "license": "CC0-1.0"
   },
   "hair_eye_clearance": {
@@ -144,5 +145,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 20214
+  "triangles": 20526
 }
