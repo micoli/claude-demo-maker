@@ -7,7 +7,7 @@ description: Make reusable Blender avatars read a text or voice recording, with 
 
 Work from the demo-maker project root. This skill owns the avatar bank, Kokoro speech, Rhubarb lip sync and Blender render. Store generated jobs under `.scratch/videos/<slug>/`. Keep generated videos out of Git.
 
-Use Node.js 22+, Python 3, Blender with Eevee, Docker and FFmpeg with libass and drawtext. Circular portraits additionally require Pillow. The bundled Rhubarb 1.14 binary is for macOS. On another platform, set `RHUBARB_BIN` to a compatible installation. Set `BLENDER_EXE` if Blender is not on PATH or installed at the standard macOS location. Set `AVATAR_FONT` to a local font file if the system cannot resolve Arial. Kokoro runs on the local Docker service at port 8880.
+Run Blender with Eevee on the host. Use Node.js 22+, Python 3 and FFmpeg with libass and drawtext. Circular portraits additionally require Pillow. The bundled Rhubarb 1.14 binary is for macOS. On another platform, set `RHUBARB_BIN` to a compatible installation. Set `BLENDER_EXE` if Blender is not on PATH or installed at the standard macOS location. Set `AVATAR_FONT` to a local font file if the system cannot resolve Arial. For speech synthesis, Kokoro runs on the local Docker service at port 8880.
 
 ## Explain actions before executing them
 

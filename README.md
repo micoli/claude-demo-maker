@@ -30,7 +30,7 @@ Lance ensuite Claude Code depuis le dépôt de destination. Les scripts calculen
 | --- | --- |
 | [Node.js](https://nodejs.org/) 22 ou plus récent | Exécution des scripts JavaScript. |
 | [Python 3](https://www.python.org/) | Lancement de Blender et composition des portraits. |
-| [Blender](https://www.blender.org/download/) avec Eevee | Rendu des avatars fournis. |
+| [Blender](https://www.blender.org/download/) avec Eevee | Rendu des avatars sur la machine hôte. |
 | [FFmpeg](https://ffmpeg.org/download.html) avec `ffprobe`, `libass` et `drawtext` | Traitement de l’audio, sous-titres et assemblage vidéo. |
 | [Docker](https://docs.docker.com/get-started/get-docker/) | Synthèse vocale Kokoro à partir d’un texte. |
 | [Rhubarb Lip Sync 1.14.0](https://github.com/DanielSWolf/rhubarb-lip-sync/releases/tag/v1.14.0) | Calcul des mouvements de bouche à partir de l’audio. |
