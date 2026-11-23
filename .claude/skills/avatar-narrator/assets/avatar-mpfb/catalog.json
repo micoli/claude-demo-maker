@@ -82,9 +82,9 @@
       "glb": "man-07/man-07.glb",
       "preview": "man-07/preview.png",
       "gender": "man",
-      "hair": "ponytail01",
+      "hair": "short02",
       "visual_approval": "pending",
-      "triangles": 22400
+      "triangles": 20692
     },
     {
       "id": "man-08",
@@ -214,9 +214,9 @@
       "glb": "neutral-08/neutral-08.glb",
       "preview": "neutral-08/preview.png",
       "gender": "neutral",
-      "hair": "bald",
+      "hair": "short01",
       "visual_approval": "pending",
-      "triangles": 17448
+      "triangles": 21126
     },
     {
       "id": "neutral-09",
@@ -274,9 +274,9 @@
       "glb": "woman-03/woman-03.glb",
       "preview": "woman-03/preview.png",
       "gender": "woman",
-      "hair": "ponytail01",
+      "hair": "rev_fr_braidbun1",
       "visual_approval": "pending",
-      "triangles": 22910
+      "triangles": 25124
     },
     {
       "id": "woman-04",
@@ -286,9 +286,9 @@
       "glb": "woman-04/woman-04.glb",
       "preview": "woman-04/preview.png",
       "gender": "woman",
-      "hair": "hair_bun_brown",
+      "hair": "bob_blunt",
       "visual_approval": "pending",
-      "triangles": 21796
+      "triangles": 20176
     },
     {
       "id": "woman-05",
@@ -334,9 +334,9 @@
       "glb": "woman-08/woman-08.glb",
       "preview": "woman-08/preview.png",
       "gender": "woman",
-      "hair": "hair_bun_brown",
+      "hair": "afro01",
       "visual_approval": "pending",
-      "triangles": 21584
+      "triangles": 19344
     },
     {
       "id": "woman-09",

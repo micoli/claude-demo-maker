@@ -102,7 +102,8 @@ export function renderAvatar(job, base, { planOnly=false }={}) {
   const version=run(blender, ['--version']);
   const glb=join(BANK, avatarId, avatarId+'.glb');
   const textureSource=existsSync(glb) ? readFileSync(glb) : Buffer.alloc(0);
-  const digest=hash(Buffer.concat([readFileSync(blend), textureSource, readFileSync(join(HERE,'render_states.py')),
+  const rendererSources = ['render_states.py', 'portrait_lighting.py'].map(file => readFileSync(join(HERE, file)));
+  const digest=hash(Buffer.concat([readFileSync(blend), textureSource, ...rendererSources,
     Buffer.from(JSON.stringify([spec.size,spec.samples,lighting,version]))]));
   const cache=join(ROOT,'.scratch/videos/avatar-cache',avatarId,digest);
   const missing=spec.states.filter(state=>!existsSync(join(cache,state+'.png')));

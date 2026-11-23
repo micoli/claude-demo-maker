@@ -12,7 +12,7 @@
       "caucasian": 0.1
     },
     "skin": "#bb8b62",
-    "hair": "ponytail01",
+    "hair": "short02",
     "hair_color": "#3d2720",
     "shirt": "#4e6b60",
     "details": {
@@ -22,13 +22,13 @@
   },
   "hair_eye_clearance": {
     "protected": true,
-    "trimmed_faces": 0,
+    "trimmed_faces": 16,
+    "passed": true,
     "checked_angles_degrees": [
       -30,
       0,
       30
-    ],
-    "passed": true
+    ]
   },
   "generator": "mpfb",
   "version": "2.0.18",
@@ -76,7 +76,7 @@
       "license": "CC0"
     },
     {
-      "file": "hair/ponytail01/ponytail01.mhclo",
+      "file": "hair/short02/short02.mhclo",
       "type": "Hair",
       "license": "CC0"
     }
@@ -121,5 +121,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 22400
+  "triangles": 20692
 }

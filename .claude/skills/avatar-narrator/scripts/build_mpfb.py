@@ -15,6 +15,9 @@ import bpy
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from portrait_lighting import apply_portrait_lighting
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'assets/avatar-mpfb'
 VISEMES = {'A': 'viseme_PP', 'B': 'viseme_SS', 'C': 'viseme_E', 'D': 'viseme_aa',
@@ -131,9 +134,7 @@ def studio(top, bottom):
     scene.render.image_settings.file_format = 'PNG'
     scene.render.image_settings.color_mode = 'RGBA'
     scene.render.film_transparent = True
-    scene.view_settings.view_transform = 'AgX'
     scene.world = bpy.data.worlds.new('Studio')
-    scene.world.color = (.15,.15,.15)
     target = Vector((0,0,(top+bottom)/2))
     bpy.ops.object.camera_add(location=(0,-3,target.z))
     camera=bpy.context.object
@@ -142,13 +143,7 @@ def studio(top, bottom):
     camera.data.type='ORTHO'
     camera.data.ortho_scale=max(.56, (top-bottom)*1.13)
     scene.camera=camera
-    for name, offset, energy, size in [('Key',(-1.5,-2,2),180,2.5),('Fill',(1.5,-1,1),100,2),('Rim',(1,1,1.5),220,1.5)]:
-        bpy.ops.object.light_add(type='AREA',location=target+Vector(offset))
-        lamp=bpy.context.object
-        lamp.name=name
-        lamp.data.energy=energy
-        lamp.data.size=size
-        lamp.rotation_euler=(target-lamp.location).to_track_quat('-Z','Y').to_euler()
+    apply_portrait_lighting(scene)
 
 
 

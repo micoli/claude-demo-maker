@@ -11,8 +11,8 @@
       "asian": 0.07,
       "caucasian": 0.9
     },
-    "skin": "#e6c0a4",
-    "hair": "hair_bun_brown",
+    "skin": "#ad765d",
+    "hair": "afro01",
     "hair_color": "#211a16",
     "outfit": "blouse",
     "details": {
@@ -97,11 +97,9 @@
       "license": "CC0"
     },
     {
+      "file": "hair/afro01/afro01.mhclo",
       "type": "Hair",
-      "file": "hair_bun_brown/hair_bun_brown.mhclo",
-      "author": "RehmanPolanski",
-      "source": "https://static.makehumancommunity.org/assets/assetpacks/hair01.html",
-      "license": "CC0-1.0"
+      "license": "CC0"
     }
   ],
   "controls": {
@@ -144,5 +142,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 21584
+  "triangles": 19344
 }

@@ -12,7 +12,7 @@
       "caucasian": 0.6
     },
     "skin": "#c3916b",
-    "hair": "ponytail01",
+    "hair": "rev_fr_braidbun1",
     "hair_color": "#151719",
     "shirt": "#7c5650",
     "details": {
@@ -36,7 +36,7 @@
   },
   "hair_eye_clearance": {
     "protected": true,
-    "trimmed_faces": 0,
+    "trimmed_faces": 31,
     "passed": true,
     "checked_angles_degrees": [
       -30,
@@ -90,9 +90,11 @@
       "license": "CC0"
     },
     {
-      "file": "hair/ponytail01/ponytail01.mhclo",
       "type": "Hair",
-      "license": "CC0"
+      "file": "rev_fr_braidbun1/rev_fr_braidbun1.mhclo",
+      "author": "Elvaerwyn",
+      "source": "https://static.makehumancommunity.org/assets/assetpacks/hair01.html",
+      "license": "CC0-1.0"
     }
   ],
   "controls": {
@@ -135,5 +137,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 22910
+  "triangles": 25124
 }

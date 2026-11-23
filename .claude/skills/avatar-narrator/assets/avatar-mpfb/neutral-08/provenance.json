@@ -12,8 +12,8 @@
       "asian": 0.06,
       "caucasian": 0.9
     },
-    "skin": "#e3b99f",
-    "hair": "bald",
+    "skin": "#b58265",
+    "hair": "short01",
     "hair_color": "#978b7f",
     "shirt": "#66627f",
     "art_direction": "neutral/androgynous adult appearance; individually varied face; both eyes unobstructed",
@@ -78,6 +78,11 @@
       "file": "tongue/tongue01/tongue01.mhclo",
       "type": "Tongue",
       "license": "CC0"
+    },
+    {
+      "file": "hair/short01/short01.mhclo",
+      "type": "Hair",
+      "license": "CC0"
     }
   ],
   "controls": {
@@ -120,5 +125,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 17448
+  "triangles": 21126
 }

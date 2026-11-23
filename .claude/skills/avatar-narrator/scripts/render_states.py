@@ -9,6 +9,9 @@ from tempfile import TemporaryDirectory
 import bpy
 from mathutils import Euler, Matrix, Vector
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from portrait_lighting import apply_portrait_lighting
+
 VISEME_STRENGTH = {'B': .50, 'C': .64, 'D': .58, 'E': .74, 'F': .80, 'H': .72}
 
 job = json.loads(Path(sys.argv[sys.argv.index('--')+1]).read_text())
@@ -59,14 +62,7 @@ if scene.get('avatar_generator') == 'mpfb':
 
 scene.render.resolution_x = scene.render.resolution_y = job['size']
 scene.eevee.taa_render_samples = job['samples']
-if job.get('lighting') == 'soft':
-    for name, factor in {'Key': .82, 'Fill': .50, 'Rim': .30}.items():
-        lamp = scene.objects.get(name)
-        if lamp and lamp.type == 'LIGHT':
-            lamp.data.energy *= factor
-    if scene.world:
-        scene.world.color = tuple(channel * .68 for channel in scene.world.color)
-    scene.view_settings.exposure -= .24
+apply_portrait_lighting(scene, job.get('lighting', 'studio'))
 
 base = {ob.name: ob.location.copy() for ob in bpy.data.objects}
 controls = json.loads(scene['avatar_controls']) if scene.get('avatar_generator') == 'mpfb' else None

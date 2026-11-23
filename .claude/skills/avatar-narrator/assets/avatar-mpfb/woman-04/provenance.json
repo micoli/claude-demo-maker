@@ -11,8 +11,8 @@
       "asian": 0.15,
       "caucasian": 0.7
     },
-    "skin": "#c59b7a",
-    "hair": "hair_bun_brown",
+    "skin": "#a97b61",
+    "hair": "bob_blunt",
     "hair_color": "#3d2720",
     "outfit": "blouse",
     "details": {
@@ -43,7 +43,7 @@
   },
   "hair_eye_clearance": {
     "protected": true,
-    "trimmed_faces": 0,
+    "trimmed_faces": 23,
     "passed": true,
     "checked_angles_degrees": [
       -30,
@@ -98,8 +98,8 @@
     },
     {
       "type": "Hair",
-      "file": "hair_bun_brown/hair_bun_brown.mhclo",
-      "author": "RehmanPolanski",
+      "file": "bob_blunt/bob_blunt.mhclo",
+      "author": "MargaretToigo",
       "source": "https://static.makehumancommunity.org/assets/assetpacks/hair01.html",
       "license": "CC0-1.0"
     }
@@ -144,5 +144,5 @@
   },
   "source": "https://github.com/makehumancommunity/mpfb2/tree/v2.0.18",
   "geometry_license": "CC0-1.0",
-  "triangles": 21796
+  "triangles": 20176
 }
