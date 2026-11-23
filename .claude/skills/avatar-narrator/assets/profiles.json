@@ -3,6 +3,7 @@
   "avatars": [
     {
       "id": "man-01",
+      "name": "Alain",
       "gender": 1,
       "age": 0.4,
       "weight": 0.36,
@@ -24,6 +25,7 @@
     },
     {
       "id": "man-02",
+      "name": "Julien",
       "gender": 1,
       "age": 0.55,
       "weight": 0.425,
@@ -45,6 +47,7 @@
     },
     {
       "id": "man-03",
+      "name": "Dario",
       "gender": 1,
       "age": 0.46,
       "weight": 0.49,
@@ -66,6 +69,7 @@
     },
     {
       "id": "man-04",
+      "name": "Oliver",
       "gender": 1,
       "age": 0.66,
       "weight": 0.555,
@@ -87,6 +91,7 @@
     },
     {
       "id": "man-05",
+      "name": "Flavio",
       "gender": 1,
       "age": 0.42,
       "weight": 0.36,
@@ -108,6 +113,7 @@
     },
     {
       "id": "man-06",
+      "name": "Alejandro",
       "gender": 1,
       "age": 0.38,
       "weight": 0.425,
@@ -129,6 +135,7 @@
     },
     {
       "id": "man-07",
+      "name": "Álvaro",
       "gender": 1,
       "age": 0.57,
       "weight": 0.49,
@@ -150,6 +157,7 @@
     },
     {
       "id": "man-08",
+      "name": "Hugo",
       "gender": 1,
       "age": 0.72,
       "weight": 0.555,
@@ -171,6 +179,7 @@
     },
     {
       "id": "man-09",
+      "name": "Arthur",
       "gender": 1,
       "age": 0.49,
       "weight": 0.36,
@@ -192,6 +201,7 @@
     },
     {
       "id": "man-10",
+      "name": "Éric",
       "gender": 1,
       "age": 0.6,
       "weight": 0.425,
@@ -213,6 +223,7 @@
     },
     {
       "id": "woman-01",
+      "name": "Aurore",
       "gender": 0,
       "age": 0.46,
       "weight": 0.36,
@@ -248,6 +259,7 @@
     },
     {
       "id": "woman-02",
+      "name": "Giulia",
       "gender": 0,
       "age": 0.66,
       "weight": 0.425,
@@ -283,6 +295,7 @@
     },
     {
       "id": "woman-03",
+      "name": "Camille",
       "gender": 0,
       "age": 0.42,
       "weight": 0.49,
@@ -318,6 +331,7 @@
     },
     {
       "id": "woman-04",
+      "name": "Emma",
       "gender": 0,
       "age": 0.38,
       "weight": 0.555,
@@ -353,6 +367,7 @@
     },
     {
       "id": "woman-05",
+      "name": "Alba",
       "gender": 0,
       "age": 0.57,
       "weight": 0.36,
@@ -388,6 +403,7 @@
     },
     {
       "id": "woman-06",
+      "name": "Sofia",
       "gender": 0,
       "age": 0.72,
       "weight": 0.425,
@@ -423,6 +439,7 @@
     },
     {
       "id": "woman-07",
+      "name": "Alice",
       "gender": 0,
       "age": 0.49,
       "weight": 0.49,
@@ -458,6 +475,7 @@
     },
     {
       "id": "woman-08",
+      "name": "Bianca",
       "gender": 0,
       "age": 0.6,
       "weight": 0.555,
@@ -493,6 +511,7 @@
     },
     {
       "id": "woman-09",
+      "name": "Abril",
       "gender": 0,
       "age": 0.4,
       "weight": 0.36,
@@ -528,6 +547,7 @@
     },
     {
       "id": "woman-10",
+      "name": "Charlotte",
       "gender": 0,
       "age": 0.55,
       "weight": 0.425,
@@ -563,6 +583,7 @@
     },
     {
       "id": "neutral-01",
+      "name": "Sacha",
       "group": "neutral",
       "gender": 0.5,
       "age": 0.42,
@@ -588,6 +609,7 @@
     },
     {
       "id": "neutral-02",
+      "name": "Alix",
       "group": "neutral",
       "gender": 0.5,
       "age": 0.58,
@@ -613,6 +635,7 @@
     },
     {
       "id": "neutral-03",
+      "name": "Fiore",
       "group": "neutral",
       "gender": 0.5,
       "age": 0.48,
@@ -638,6 +661,7 @@
     },
     {
       "id": "neutral-04",
+      "name": "Sole",
       "group": "neutral",
       "gender": 0.5,
       "age": 0.66,
@@ -663,6 +687,7 @@
     },
     {
       "id": "neutral-05",
+      "name": "Río",
       "group": "neutral",
       "gender": 0.5,
       "age": 0.4,
@@ -688,6 +713,7 @@
     },
     {
       "id": "neutral-06",
+      "name": "Álex",
       "group": "neutral",
       "gender": 0.5,
       "age": 0.54,
@@ -713,6 +739,7 @@
     },
     {
       "id": "neutral-07",
+      "name": "Charlie",
       "group": "neutral",
       "gender": 0.5,
       "age": 0.7,
@@ -738,6 +765,7 @@
     },
     {
       "id": "neutral-08",
+      "name": "Robin",
       "group": "neutral",
       "gender": 0.5,
       "age": 0.46,
@@ -763,6 +791,7 @@
     },
     {
       "id": "neutral-09",
+      "name": "Morgan",
       "group": "neutral",
       "gender": 0.5,
       "age": 0.61,
@@ -788,6 +817,7 @@
     },
     {
       "id": "neutral-10",
+      "name": "Taylor",
       "group": "neutral",
       "gender": 0.5,
       "age": 0.5,

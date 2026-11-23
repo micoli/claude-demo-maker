@@ -4,6 +4,7 @@
   "avatars": [
     {
       "id": "man-01",
+      "name": "Alain",
       "generator": "mpfb",
       "blend": "man-01/avatar.blend",
       "glb": "man-01/man-01.glb",
@@ -15,6 +16,7 @@
     },
     {
       "id": "man-02",
+      "name": "Julien",
       "generator": "mpfb",
       "blend": "man-02/avatar.blend",
       "glb": "man-02/man-02.glb",
@@ -26,6 +28,7 @@
     },
     {
       "id": "man-03",
+      "name": "Dario",
       "generator": "mpfb",
       "blend": "man-03/avatar.blend",
       "glb": "man-03/man-03.glb",
@@ -37,6 +40,7 @@
     },
     {
       "id": "man-04",
+      "name": "Oliver",
       "generator": "mpfb",
       "blend": "man-04/avatar.blend",
       "glb": "man-04/man-04.glb",
@@ -48,6 +52,7 @@
     },
     {
       "id": "man-05",
+      "name": "Flavio",
       "generator": "mpfb",
       "blend": "man-05/avatar.blend",
       "glb": "man-05/man-05.glb",
@@ -59,6 +64,7 @@
     },
     {
       "id": "man-06",
+      "name": "Alejandro",
       "generator": "mpfb",
       "blend": "man-06/avatar.blend",
       "glb": "man-06/man-06.glb",
@@ -70,6 +76,7 @@
     },
     {
       "id": "man-07",
+      "name": "Álvaro",
       "generator": "mpfb",
       "blend": "man-07/avatar.blend",
       "glb": "man-07/man-07.glb",
@@ -81,6 +88,7 @@
     },
     {
       "id": "man-08",
+      "name": "Hugo",
       "generator": "mpfb",
       "blend": "man-08/avatar.blend",
       "glb": "man-08/man-08.glb",
@@ -92,6 +100,7 @@
     },
     {
       "id": "man-09",
+      "name": "Arthur",
       "generator": "mpfb",
       "blend": "man-09/avatar.blend",
       "glb": "man-09/man-09.glb",
@@ -103,6 +112,7 @@
     },
     {
       "id": "man-10",
+      "name": "Éric",
       "generator": "mpfb",
       "blend": "man-10/avatar.blend",
       "glb": "man-10/man-10.glb",
@@ -114,6 +124,7 @@
     },
     {
       "id": "neutral-01",
+      "name": "Sacha",
       "generator": "mpfb",
       "blend": "neutral-01/avatar.blend",
       "glb": "neutral-01/neutral-01.glb",
@@ -125,6 +136,7 @@
     },
     {
       "id": "neutral-02",
+      "name": "Alix",
       "generator": "mpfb",
       "blend": "neutral-02/avatar.blend",
       "glb": "neutral-02/neutral-02.glb",
@@ -136,6 +148,7 @@
     },
     {
       "id": "neutral-03",
+      "name": "Fiore",
       "generator": "mpfb",
       "blend": "neutral-03/avatar.blend",
       "glb": "neutral-03/neutral-03.glb",
@@ -147,6 +160,7 @@
     },
     {
       "id": "neutral-04",
+      "name": "Sole",
       "generator": "mpfb",
       "blend": "neutral-04/avatar.blend",
       "glb": "neutral-04/neutral-04.glb",
@@ -158,6 +172,7 @@
     },
     {
       "id": "neutral-05",
+      "name": "Río",
       "generator": "mpfb",
       "blend": "neutral-05/avatar.blend",
       "glb": "neutral-05/neutral-05.glb",
@@ -169,6 +184,7 @@
     },
     {
       "id": "neutral-06",
+      "name": "Álex",
       "generator": "mpfb",
       "blend": "neutral-06/avatar.blend",
       "glb": "neutral-06/neutral-06.glb",
@@ -180,6 +196,7 @@
     },
     {
       "id": "neutral-07",
+      "name": "Charlie",
       "generator": "mpfb",
       "blend": "neutral-07/avatar.blend",
       "glb": "neutral-07/neutral-07.glb",
@@ -191,6 +208,7 @@
     },
     {
       "id": "neutral-08",
+      "name": "Robin",
       "generator": "mpfb",
       "blend": "neutral-08/avatar.blend",
       "glb": "neutral-08/neutral-08.glb",
@@ -202,6 +220,7 @@
     },
     {
       "id": "neutral-09",
+      "name": "Morgan",
       "generator": "mpfb",
       "blend": "neutral-09/avatar.blend",
       "glb": "neutral-09/neutral-09.glb",
@@ -213,6 +232,7 @@
     },
     {
       "id": "neutral-10",
+      "name": "Taylor",
       "generator": "mpfb",
       "blend": "neutral-10/avatar.blend",
       "glb": "neutral-10/neutral-10.glb",
@@ -224,6 +244,7 @@
     },
     {
       "id": "woman-01",
+      "name": "Aurore",
       "generator": "mpfb",
       "blend": "woman-01/avatar.blend",
       "glb": "woman-01/woman-01.glb",
@@ -235,6 +256,7 @@
     },
     {
       "id": "woman-02",
+      "name": "Giulia",
       "generator": "mpfb",
       "blend": "woman-02/avatar.blend",
       "glb": "woman-02/woman-02.glb",
@@ -246,6 +268,7 @@
     },
     {
       "id": "woman-03",
+      "name": "Camille",
       "generator": "mpfb",
       "blend": "woman-03/avatar.blend",
       "glb": "woman-03/woman-03.glb",
@@ -257,6 +280,7 @@
     },
     {
       "id": "woman-04",
+      "name": "Emma",
       "generator": "mpfb",
       "blend": "woman-04/avatar.blend",
       "glb": "woman-04/woman-04.glb",
@@ -268,6 +292,7 @@
     },
     {
       "id": "woman-05",
+      "name": "Alba",
       "generator": "mpfb",
       "blend": "woman-05/avatar.blend",
       "glb": "woman-05/woman-05.glb",
@@ -279,6 +304,7 @@
     },
     {
       "id": "woman-06",
+      "name": "Sofia",
       "generator": "mpfb",
       "blend": "woman-06/avatar.blend",
       "glb": "woman-06/woman-06.glb",
@@ -290,6 +316,7 @@
     },
     {
       "id": "woman-07",
+      "name": "Alice",
       "generator": "mpfb",
       "blend": "woman-07/avatar.blend",
       "glb": "woman-07/woman-07.glb",
@@ -301,6 +328,7 @@
     },
     {
       "id": "woman-08",
+      "name": "Bianca",
       "generator": "mpfb",
       "blend": "woman-08/avatar.blend",
       "glb": "woman-08/woman-08.glb",
@@ -312,6 +340,7 @@
     },
     {
       "id": "woman-09",
+      "name": "Abril",
       "generator": "mpfb",
       "blend": "woman-09/avatar.blend",
       "glb": "woman-09/woman-09.glb",
@@ -323,6 +352,7 @@
     },
     {
       "id": "woman-10",
+      "name": "Charlotte",
       "generator": "mpfb",
       "blend": "woman-10/avatar.blend",
       "glb": "woman-10/woman-10.glb",

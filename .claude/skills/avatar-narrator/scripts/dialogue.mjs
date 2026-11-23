@@ -5,7 +5,7 @@ import {createHash,randomInt} from 'node:crypto';
 import {existsSync,mkdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {dirname,join,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {renderAvatar} from './render.mjs';
+import {renderAvatar,resolveAvatar} from './render.mjs';
 import {ensureKokoro,speakKokoro} from './kokoro.mjs';
 import {KOKORO_IMAGE,RHUBARB} from './lib.mjs';
 
@@ -59,7 +59,7 @@ const assEscape=s=>s.replaceAll('\\','\\\\').replaceAll('{','\\{').replaceAll('}
 // Keep the random choice per actor across reruns so their voice and audio cache stay stable.
 const previous=existsSync(join(dir,'voice-selection.json')) ? read('voice-selection.json') : {};
 const voiceSelection=Object.fromEntries(actors.map(([id,actor])=>{
- const group=actor.avatar.replace(/^pilot-/,'').split('-')[0];
+ const {gender:group}=resolveAvatar(actor.avatar);
  let voice=actor.voice;
  if(language==='en'){
   const pool=Object.hasOwn(englishVoices,group) ? englishVoices[group] : null;

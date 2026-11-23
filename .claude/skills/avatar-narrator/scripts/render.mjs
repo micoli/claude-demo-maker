@@ -15,6 +15,17 @@ const read = file => JSON.parse(readFileSync(file, 'utf8'));
 const run = (command, args) => execFileSync(command, args, { encoding: 'utf8', maxBuffer: 32*1024*1024 });
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 
+export function resolveAvatar(selection) {
+  if (typeof selection !== 'string') throw Error('Avatar name or ID required');
+  const key = selection.trim().normalize('NFC').toLowerCase();
+  if (key === 'pilot-man') return { id: key, gender: 'man' };
+  if (key === 'pilot-woman') return { id: key, gender: 'woman' };
+  const { avatars } = read(join(BANK, 'catalog.json'));
+  const avatar = avatars.find(({ id, name }) => id === key || name?.toLowerCase() === key);
+  if (avatar) return avatar;
+  throw Error(`Unknown avatar "${selection}". Choose a name from the MPFB catalog.`);
+}
+
 export function plan(job, cues) {
   const fps = job.fps ?? 25;
   const size = job.size ?? 540;
@@ -76,24 +87,24 @@ export function plan(job, cues) {
 }
 
 export function renderAvatar(job, base, { planOnly=false }={}) {
-  if (!/^(?:(man|woman|neutral)-(0[1-9]|10)|pilot-(man|woman))$/.test(job.avatar)) throw Error('Use man-01..10, woman-01..10, neutral-01..10, pilot-man or pilot-woman');
+  const { id: avatarId } = resolveAvatar(job.avatar);
   if (typeof job.cues !== 'string' || typeof job.output !== 'string') throw Error('cues and output paths required');
   const cueFile=resolve(base, job.cues), out=resolve(base, job.output);
   const spec=plan(job, read(cueFile));
   const lighting=job.lighting??'studio';
   if (!['studio','soft'].includes(lighting)) throw Error('lighting must be studio or soft');
-  const blend=join(BANK, job.avatar, 'avatar.blend');
+  const blend=join(BANK, avatarId, 'avatar.blend');
   if (!existsSync(blend)) throw Error('MPFB avatar missing: run build_mpfb.py --bank first (or omit --bank for pilots)');
   // Blend, companion textures and renderer contents determine the cache key.
   // Include Blender version for different installations / upgrades.
   const macBlender='/Applications/Blender.app/Contents/MacOS/Blender';
   const blender=process.env.BLENDER_EXE??(existsSync(macBlender)?macBlender:'blender');
   const version=run(blender, ['--version']);
-  const glb=join(BANK, job.avatar, job.avatar+'.glb');
+  const glb=join(BANK, avatarId, avatarId+'.glb');
   const textureSource=existsSync(glb) ? readFileSync(glb) : Buffer.alloc(0);
   const digest=hash(Buffer.concat([readFileSync(blend), textureSource, readFileSync(join(HERE,'render_states.py')),
     Buffer.from(JSON.stringify([spec.size,spec.samples,lighting,version]))]));
-  const cache=join(ROOT,'.scratch/videos/avatar-cache',job.avatar,digest);
+  const cache=join(ROOT,'.scratch/videos/avatar-cache',avatarId,digest);
   const missing=spec.states.filter(state=>!existsSync(join(cache,state+'.png')));
   const report={avatar:job.avatar,frames:spec.frames.length,uniqueStates:spec.states.length,
     missingStates:missing.length,cachedStates:spec.states.length-missing.length,cache,fps:spec.fps};

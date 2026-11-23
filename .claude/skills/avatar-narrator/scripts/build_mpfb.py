@@ -8,6 +8,7 @@ import hashlib
 import json
 import math
 import sys
+import unicodedata
 from pathlib import Path
 
 import bpy
@@ -204,7 +205,7 @@ def main():
     parser.add_argument('--mpfb-root',required=True,type=Path)
     parser.add_argument('--assets',required=True,type=Path)
     parser.add_argument('--targets',required=True,type=Path)
-    parser.add_argument('--only')
+    parser.add_argument('--only', help='Build one avatar by name or ID')
     parser.add_argument('--outfit', help='Override the outfit when building one avatar')
     parser.add_argument('--group',choices=['man','woman','neutral'],help='Rebuild only one group in --bank mode')
     parser.add_argument('--bank',action='store_true',help='Build ten men, ten women and ten neutral presenters from profiles.json')
@@ -244,13 +245,17 @@ def main():
         if not args.bank:
             raise ValueError('--group requires --bank')
         profiles=[p for p in profiles if p['id'].startswith(args.group+'-')]
-    if args.only and args.only not in {p['id'] for p in profiles}:
-        raise ValueError('Unknown avatar ID for the selected pilot/bank mode')
+    if args.only:
+        selection = unicodedata.normalize('NFC', args.only.strip()).casefold()
+        profiles = [
+            profile for profile in profiles
+            if selection in (profile['id'], profile.get('name', '').casefold())
+        ]
+        if len(profiles) != 1:
+            parser.error('Choose one avatar by name or ID in the selected pilot/bank mode')
     catalog=[]
-    for profile in profiles:
+    for progress, profile in enumerate(profiles, start=1):
         ident,gender,skin_hex,hairname=[profile[k] for k in ['id','gender','skin','hair']]
-        if args.only and args.only != ident:
-            continue
         for ob in list(bpy.context.scene.objects):
             bpy.data.objects.remove(ob,do_unlink=True)
         bpy.data.orphans_purge(do_recursive=True)
@@ -359,13 +364,13 @@ def main():
         bpy.ops.render.render(write_still=True)
         info={'profile':profile,'outfit':{'id':outfit_id,**outfit},'hair_eye_clearance':{'protected':True,'trimmed_faces':len(blocked)},'generator':'mpfb','version':'2.0.18','id':ident,'visual_approval':'pending','macro':macro,'assets':assets_used,'controls':json.loads(scene['avatar_controls']),'source':'https://github.com/makehumancommunity/mpfb2/tree/v2.0.18','geometry_license':'CC0-1.0','triangles':sum(sum(len(p.vertices)-2 for p in ob.data.polygons) for ob in meshes)}
         (folder/'provenance.json').write_text(json.dumps(info,indent=2)+'\n')
-        catalog.append({'id':ident,'generator':'mpfb','blend':ident+'/avatar.blend','glb':ident+'/'+ident+'.glb','preview':ident+'/preview.png','gender':profile.get('group','man' if gender >= .75 else 'woman' if gender <= .25 else 'neutral'),'hair':hairname,'visual_approval':'pending','triangles':info['triangles']})
         if args.bank:
+            catalog.append({'id':ident,'name':profile['name'],'generator':'mpfb','blend':ident+'/avatar.blend','glb':ident+'/'+ident+'.glb','preview':ident+'/preview.png','gender':profile.get('group','man' if gender >= .75 else 'woman' if gender <= .25 else 'neutral'),'hair':hairname,'visual_approval':'pending','triangles':info['triangles']})
             manifest=OUT/'catalog.json'
             previous=json.loads(manifest.read_text())['avatars'] if manifest.exists() else []
             previous=[entry for entry in previous if entry['id'] != ident]+[catalog[-1]]
             manifest.write_text(json.dumps({'version':1,'generator':'mpfb','avatars':sorted(previous,key=lambda p:p['id'])},indent=2)+'\n')
-        print('##JSON##'+json.dumps({'id':ident,'status':'exported','triangles':info['triangles'],'progress':len(catalog),'requested':1 if args.only else len(profiles)}),flush=True)
+        print('##JSON##'+json.dumps({'id':ident,'status':'exported','triangles':info['triangles'],'progress':progress,'requested':len(profiles)}),flush=True)
 
     if args.bank:
         path=OUT/'catalog.json'
