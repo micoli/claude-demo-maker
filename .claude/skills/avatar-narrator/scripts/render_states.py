@@ -9,6 +9,8 @@ from tempfile import TemporaryDirectory
 import bpy
 from mathutils import Euler, Matrix, Vector
 
+VISEME_STRENGTH = {'B': .50, 'C': .64, 'D': .58, 'E': .74, 'F': .80, 'H': .72}
+
 job = json.loads(Path(sys.argv[sys.argv.index('--')+1]).read_text())
 
 
@@ -124,7 +126,11 @@ for state in job['states']:
         else:
             bone.matrix_basis.identity()
     if controls:
-        weights = {controls['visemes'][shape]: 1.0}
+        visemes = controls['visemes']
+        strength = VISEME_STRENGTH.get(shape, 1.0)
+        weights = {visemes[shape]: strength}
+        if strength < 1:
+            weights[visemes['X']] = 1 - strength
         if blink == '1':
             weights.update(controls['blink'])
         for key, value in controls['expressions'][expression].items():
